@@ -5,7 +5,7 @@
 			autor: "Mauricio Gamboa"
 		},
 		{
-			comentario: "Fuí hace unos meses para la extracción de muelas de mi hija. Un excelente servicio y atención a niños y público en general. Totalmente recomendado!!!",
+			comentario: "Fuí hace unos meses para la extracción de muelas de mi hija. Excelente servicio a niños y público en general. Totalmente recomendado!",
 			autor: "Vanessa Huillca"
 		},
 		{
@@ -68,6 +68,15 @@
 		width: 100%;
     	height: 327px;
 		overflow-x: scroll;
+	}
+	#carousel::-webkit-scrollbar {
+		display: none;
+	}
+
+	/* Hide scrollbar for IE, Edge and Firefox */
+	#carousel {
+		-ms-overflow-style: none;  /* IE and Edge */
+		scrollbar-width: none;  /* Firefox */
 	}
 	.container {
 		position: absolute;
