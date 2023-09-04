@@ -72,7 +72,7 @@
         </svg>         
     </div>
     <p>
-        <a href="/privacidad">Política de Privacidad</a>  |
+        <a href="/privacidad">Privacidad</a>  |
         <a href="/terminos">Términos y Condiciones</a>
     </p>
     <div class="line"/>
