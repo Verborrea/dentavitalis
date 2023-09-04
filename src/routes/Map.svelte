@@ -24,8 +24,8 @@
                     coordinates: [-71.54635865124519,-16.38957861592958]
                 },
                 properties: {
-                    title: 'Mapbox',
-                    description: 'Washington, D.C.'
+                    title: 'Sede',
+                    description: 'Av. Ejército'
                 }
                 },
                 {
@@ -35,20 +35,30 @@
                     coordinates: [-71.54408580256991,-16.34362737225257]
                 },
                 properties: {
-                    title: 'Mapbox',
-                    description: 'San Francisco, California'
+                    title: 'Sede',
+                    description: 'Las Malvinas'
                 }
                 }
             ]
         };
         // add markers to map
         for (const feature of geojson.features) {
-        // create a HTML element for each feature
-        const el = document.createElement('div');
-        el.className = 'marker';
+            // create a HTML element for each feature
+            const el = document.createElement('div');
+            el.className = 'marker';
 
-        // make a marker for each feature and add to the map
-        new mapboxgl.Marker(el).setLngLat(feature.geometry.coordinates).addTo(map);
+            // make a marker for each feature and add to the map
+            new mapboxgl.Marker(el).setLngLat(feature.geometry.coordinates)
+            .setPopup(
+                new mapboxgl.Popup({ offset: 25 }) // add popups
+                .setHTML(
+                    `<a href='https://goo.gl/maps/qC2jfY87K8N4ELgbA' target='_blank'>
+                        <h3>${feature.properties.title}</h3><p>${feature.properties.description}</p>
+                     </a>
+                    `
+                )
+            )
+            .addTo(map);
         }
     });
 

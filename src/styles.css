@@ -80,3 +80,29 @@ a.button.blur {
     border-radius: 50%;
     cursor: pointer;
 }
+.mapboxgl-popup a{
+    max-width: 200px;
+    text-decoration: none;
+    color: black;
+    outline: none;
+}
+
+.mapboxgl-popup a:focus{
+    outline: none;
+}
+
+.mapboxgl-popup p{
+    font-size: 16px;
+}
+
+.mapboxgl-popup h3{
+    color: var(--blue);
+}
+  
+.mapboxgl-popup-content {
+    text-align: center;
+}
+
+a:hover {
+    text-decoration: underline;
+}
