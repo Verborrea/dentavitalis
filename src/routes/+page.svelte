@@ -6,7 +6,7 @@
 	import smile from "$lib/images/smile.svg";
 
 	import Image from "$lib/Image.svelte";
-    import Carousel from "./Carousel.svelte";
+    import Carousel from "./DCarousel.svelte";
     import Map from "./Map.svelte";
 </script>
 
