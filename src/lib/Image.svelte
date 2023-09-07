@@ -53,4 +53,15 @@
 		left: 0px;
 		top: -16px;
 	}
+	@media (min-width: 924px) {
+		.container {
+			flex-basis: 50%;
+		}
+		img {
+			height: 428px;
+		}
+		#pbox1 {
+			top: -50%;
+		}
+	}
 </style>

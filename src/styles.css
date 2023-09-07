@@ -106,3 +106,19 @@ a.button.blur {
 a:hover {
     text-decoration: underline;
 }
+
+@media (min-width: 924px) {
+    h1 {
+        font-size: 64px;
+        line-height: 60px;
+        letter-spacing: -0.04em;
+    }
+    h2 {
+        font-size: 64px;
+        line-height: 60px;
+        letter-spacing: -0.04em;
+    }
+    p, a.button {
+        font-size: 20px;
+    }
+}
