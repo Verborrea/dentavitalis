@@ -1,7 +1,7 @@
 <script>
 	import chica from "$lib/images/chica.jpg";
 	import tools from "$lib/images/tools.svg";
-	import dentist from "$lib/images/dentist.jpg";
+	import dentist from "$lib/images/doc.jpg";
 	import tech from "$lib/images/tech.jpg";
 	import smile from "$lib/images/smile.svg";
 
@@ -237,7 +237,6 @@
 			align-items: flex-start;
 			max-width: 540px;
 			padding: 0 16px;
-			/* margin-right: calc((100% - 1080px) / 2); */
 		}
 		#third img {
 			display: block;

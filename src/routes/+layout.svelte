@@ -7,6 +7,7 @@
 	let isActive = false;
 
 	function burgerBtn() {
+		console.log("hl")
 		isActive = (isActive ? false : true);
 	}
 
@@ -42,11 +43,11 @@
 		</button>
 
 		<ul class="mobile" class:change={isActive}>
-			<li><Option href="/">Inicio</Option></li>
-			<li><Option href="/nosotros">Nosotros</Option></li>
-			<li><Option href="/servicios" list={servicios}>Servicios</Option></li>
-			<li><Option href="/sedes" list={sedes}>Sedes</Option></li>
-			<li><Option href="/contacto">Contáctanos</Option></li>
+			<li on:click={burgerBtn}><Option href="/" >Inicio</Option></li>
+			<li on:click={burgerBtn}><Option href="/nosotros" >Nosotros</Option></li>
+			<li on:click={burgerBtn}><Option href="/servicios" list={servicios} >Servicios</Option></li>
+			<li on:click={burgerBtn}><Option href="/sedes" list={sedes}>Sedes</Option></li>
+			<li on:click={burgerBtn}><Option href="/contacto">Contáctanos</Option></li>
 		</ul>
 
 		<ul class="desktop">
@@ -201,6 +202,9 @@
 	}
 
 	@media (min-width: 768px) {
+		nav>.mobile {
+			display: none;
+		}
 		address > a:first-child {
 			display: block;
 		}

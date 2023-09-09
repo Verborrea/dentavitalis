@@ -109,6 +109,7 @@
 	}
 
 	.card {
+		user-select: none;
 		height: 342px;
 		list-style: none;
 		cursor: pointer;

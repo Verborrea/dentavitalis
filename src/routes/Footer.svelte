@@ -115,7 +115,7 @@
     }
 
     .spacer {
-        margin-top: 64px;
+        position: relative;
         aspect-ratio: 390/94;
         width: 100%;
         background-repeat: no-repeat;
