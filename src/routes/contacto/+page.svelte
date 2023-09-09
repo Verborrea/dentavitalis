@@ -3,15 +3,22 @@
     import '../../mapbox.css'
     import { onMount, onDestroy } from "svelte"
 
-    let mapContainer, map;
+    let mapContainer, map, width;
+    let center = [-71.5578, -16.36805];
+    let zoom = 11;
+
+    $: if (width > 900) {
+        center = [-71.5600, -16.3653]
+        zoom = 13
+    }
 
     onMount(() => {
         mapboxgl.accessToken = 'pk.eyJ1IjoiYWxhbi0yNSIsImEiOiJjbGViaGI4aDkwcHpxM25udTAwaWcyczFrIn0.MZhpce5K1n4Gi7xBVGFj6Q';
         map = new mapboxgl.Map({
             container: mapContainer, // container ID
             style: 'mapbox://styles/alan-25/clm58crii02cx01qi2xqb74tx', // style URL
-            center: [-71.5578, -16.36805], // starting position [lng, lat]
-            zoom: 13, // starting zoom
+            center: center, // starting position [lng, lat]
+            zoom: zoom, // starting zoom
         });
         const geojson = {
             type: 'FeatureCollection',
@@ -68,7 +75,7 @@
     });
 </script>
 
-<article>
+<article bind:offsetWidth={width}>
     <div class="container">
         <form action="">
             <h1>Contáctanos</h1>
@@ -156,8 +163,28 @@
         outline: none;
         background-color: #a8fffe;
     }
-    @media (min-width: 768px) {
+    @media (max-width: 768px) {
+        article {
+            height: auto;
+        }
+        .container {
+            position: static;
+            transform: translate(0,0);
+            width: calc(100% - 48px);
+            margin: 24px;
+        }
+        .map {
+            position: relative;
+            width: calc(100% - 48px);
+            aspect-ratio: 1;
+            height: auto;
+            margin: 24px;
+            border-radius: 32px;
+        }
     }
-    @media (min-width: 1080px) {
+    @media (max-width: 1080px) {
+        .container {
+            left: 0;
+        }
     }
 </style>
