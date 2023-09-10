@@ -24,7 +24,7 @@
 			<p>Ortodoncia, Diseño de sonrisa, Odontología estética</p>
 		</div>
 	</div>
-	<Track />
+	<Track init_scroll="false" />
 </article>
 <article>
 	<div id="malvinas" class="sede">
@@ -44,7 +44,7 @@
 			<p>Prótesis dentales, colocación de coronas y puentes</p>
 		</div>
 	</div>
-	<Track />
+	<Track init_scroll="true" />
 </article>
 
 
