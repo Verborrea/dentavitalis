@@ -1,4 +1,6 @@
-<div class="image-track">
+<script></script>
+
+<div class="image-track" data-mouse-down-at={0}>
     <img draggable="false" class="image" src="https://gacetadental.com/wp-content/uploads/2022/07/abrir-clinica-dental-documentacion.jpg" alt="img">
     <img draggable="false" class="image" src="https://gacetadental.com/wp-content/uploads/2022/07/abrir-clinica-dental-documentacion.jpg" alt="img">
     <img draggable="false" class="image" src="https://gacetadental.com/wp-content/uploads/2022/07/abrir-clinica-dental-documentacion.jpg" alt="img">
@@ -22,5 +24,6 @@
         gap: 4vmin;
         position: relative;
         left: 50%;
+        overflow-x: hidden;
     }
 </style>
