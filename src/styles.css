@@ -19,6 +19,7 @@
 * {
     --teal: #0FB3B2;
     --blue: #1C77A2;
+    --dark-blue: #155A7E;
     --dark-gray: #979BAB;
     --white: #fff;
 
@@ -44,7 +45,7 @@ h2 {
     letter-spacing: -0.04em;
 }
 p, a.button {
-    font-size: 18px;
+    font-size: 16px;
 }
 strong {
     color: var(--teal);
@@ -136,5 +137,8 @@ a:hover {
         font-size: 64px;
         line-height: 60px;
         letter-spacing: -0.04em;
+    }
+    p, a.button {
+        font-size: 18px;
     }
 }

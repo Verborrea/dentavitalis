@@ -14,6 +14,9 @@
 
 
 <style>
+	* {
+		text-align: left;
+	}
 	h2 {
 		font-size: 26px;
 		line-height: 28px;
@@ -24,13 +27,17 @@
 	}
 	p {
 		font-size: 16px;
-		text-align: left;
 	}
 
 	article>div {
+		padding: 24px 0;
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
 		gap: 12px;
+	}
+
+	article {
+		padding: 24px;
 	}
 </style>

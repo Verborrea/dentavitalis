@@ -1,8 +1,9 @@
 <script>
     import nosotros from "$lib/images/nosotros.jpg";
-    import dentadura from "$lib/images/dentadura.jpg";
+    import dentadura from "$lib/images/dentadura.png";
     import smile from "$lib/images/smile.svg";
     import Doctor from "./Doctor.svelte";
+    import Image from "../../lib/Image.svelte";
 </script>
 
 
@@ -58,69 +59,64 @@
     </article>
 </section>
 
-<section id="tech" class="fcol p24">
-    <img src={dentadura} alt="Dentadura" />
-    <p><strong>Soluciones modernas</strong></p>
-    <h2>Utilizamos tecnología <strong>3D</strong></h2>
-    <p>
-        La impresión en 3D para dientes, también conocida como impresión dental
-        3D o fabricación aditiva dental, es una tecnología innovadora que se
-        utiliza en el campo de la odontología para crear prótesis dentales,
-        modelos de estudio, alineadores transparentes y otros dispositivos
-        dentales de manera precisa y eficiente.
-    </p>
-</section>
+<div>
+    <div id="tech-spacer-1" />
+    <section id="tech" class="fcol p24">
+        <img src={dentadura} alt="Dentadura" />
+        <p><strong>Soluciones modernas</strong></p>
+        <h2>Utilizamos tecnología <strong>3D</strong></h2>
+        <p>
+            La impresión en 3D para dientes, también conocida como impresión dental
+            3D o fabricación aditiva dental, es una tecnología innovadora que se
+            utiliza en el campo de la odontología para crear prótesis dentales,
+            modelos de estudio, alineadores transparentes y otros dispositivos
+            dentales de manera precisa y eficiente.
+        </p>
+    </section>
+    <div id="tech-spacer-2" />
+</div>
 
-<section>
-    <h1>Mira como funciona</h1>
+<section class="funciona fcol p24">
+    <h2>Mira como funciona</h2>
     <p>
         A continuación te explicamos todo el proceso para imprimir una sonrisa
         perfecta:
     </p>
-    <ol>
-        <li>
-            <h3>Escaneo</h3>
-            <p>
-                Este escáner toma imágenes detalladas y en 3D de la estructura
-                dental y la encía, creando un modelo digital altamente preciso.
-            </p>
-        </li>
-        <li>
-            <h3>Diseño en Laboratorio</h3>
-            <p>
-                Una vez que se obtiene el escaneo 3D del paciente, los
-                profesionales dentales utilizan software de diseño asistido por
-                computadora (CAD) específico para la odontología para planificar
-                y diseñar la prótesis dental o el dispositivo necesario.
-            </p>
-        </li>
-        <li>
-            <h3>Impresión</h3>
-            <p>
-                El archivo de diseño se carga en una impresora 3D dental que
-                utiliza resinas dentales o materiales similares para construir
-                el objeto capa por capa. Las impresoras 3D dentales utilizan
-                tecnologías como la estereolitografía (SLA) o la deposición de
-                material fundido (FDM) para imprimir las capas y crear el objeto
-                final.
-            </p>
-        </li>
-        <li>
-            <h3>Colocación y entrega</h3>
-            <p>
-                Una vez que la prótesis dental o el dispositivo está listo y
-                cumple con los estándares de calidad, se entrega al paciente
-                para su colocación y uso.
-            </p>
-        </li>
-    </ol>
+    <strong>1. Escaneo</strong>
+    <p>
+        Este escáner toma imágenes detalladas y en 3D de la estructura
+        dental y la encía, creando un modelo digital altamente preciso.
+    </p>
+    <strong>2. Diseño en Laboratorio</strong>
+    <p>
+        Una vez que se obtiene el escaneo 3D del paciente, los
+        profesionales dentales utilizan software de diseño asistido por
+        computadora (CAD) específico para la odontología para planificar
+        y diseñar la prótesis dental o el dispositivo necesario.
+    </p>
+    <strong>3. Impresión</strong>
+    <p>
+        El archivo de diseño se carga en una impresora 3D dental que
+        utiliza resinas dentales o materiales similares para construir
+        el objeto capa por capa. Las impresoras 3D dentales utilizan
+        tecnologías como la estereolitografía (SLA) o la deposición de
+        material fundido (FDM) para imprimir las capas y crear el objeto
+        final.
+    </p>
+
+    <strong>4. Colocación y entrega</strong>
+    <p>
+        Una vez que la prótesis dental o el dispositivo está listo y
+        cumple con los estándares de calidad, se entrega al paciente
+        para su colocación y uso.
+    </p>
 </section>
 
 <section class="familia">
     <img src={smile} alt="Icono con sonrisa y estrellas" />
     <h2>Conoce a nuestra <strong>familia</strong></h2>
     <Doctor nombre="Dr. José Enmanuel Pacheco" especialidad="Ortodoncia">
-        <img slot="img" src={nosotros} alt={"fas"}>
+        <Image slot="img" src={nosotros} alt="Doctor José Enmanuel Pacheco"/>
         Sed lacinia molestie ipsum non commodo. Morbi non lacus in lacus
         pharetra tristique. Cras ullamcorper lacinia massa, sit amet suscipit
         felis. Vestibulum pulvinar augue. A justo feugiat venenatis. Maecenas
@@ -131,7 +127,7 @@
         sapien.
     </Doctor>
     <Doctor nombre="Dr. José Enmanuel Pacheco" especialidad="Ortodoncia">
-        <img slot="img" src={nosotros} alt={"fas"}>
+        <Image slot="img" src={nosotros} alt="Doctor José Enmanuel Pacheco"/>
         Sed lacinia molestie ipsum non commodo. Morbi non lacus in lacus
         pharetra tristique. Cras ullamcorper lacinia massa, sit amet suscipit
         felis. Vestibulum pulvinar augue. A justo feugiat venenatis. Maecenas
@@ -142,7 +138,7 @@
         sapien.
     </Doctor>
     <Doctor nombre="Dr. José Enmanuel Pacheco" especialidad="Ortodoncia">
-        <img slot="img" src={nosotros} alt={"fas"}>
+        <Image slot="img" src={nosotros} alt="Doctor José Enmanuel Pacheco"/>
         Sed lacinia molestie ipsum non commodo. Morbi non lacus in lacus
         pharetra tristique. Cras ullamcorper lacinia massa, sit amet suscipit
         felis. Vestibulum pulvinar augue. A justo feugiat venenatis. Maecenas
@@ -156,7 +152,17 @@
 
 
 <style>
-    .frame, .frame>div, .mision-vision > article, #tech {
+    #tech-spacer-1, #tech-spacer-2 {
+        aspect-ratio: 900/100;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    #tech-spacer-1 {background-image: url('$lib/images/stacked-waves-top.svg');}
+    #tech-spacer-2 {background-image: url('$lib/images/stacked-waves-bottom.svg');}
+
+    .frame, .frame>div, .mision-vision > article, #tech, .funciona {
         display: flex;
         gap: 16px;
     }
@@ -174,16 +180,13 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        background-image: url('$lib/images/stacked-steps.svg');
-    }
-    .frame strong {
-        color: var(--blue);
+        background-image: url('$lib/images/stacked-waves-bottom.svg');
     }
     .frame img {
         border-radius: 32px;
     }
     /* ==================== */
-    .mision-vision {
+    .mision-vision{
         display: flex;
         gap: 64px;
     }
@@ -196,6 +199,18 @@
         margin: auto;
     }
     /* ==================== */
+    #tech {
+        background-color: var(--teal);
+        color: var(--white);
+    }
+    #tech strong, .frame strong{
+        color: var(--dark-blue);
+    }
+    #tech>p>strong {
+        font-size: 20px;
+        letter-spacing: -0.04em;
+    }
+    /* ==================== */
     .familia {
 		align-items: center;
 		text-align: center;
@@ -204,7 +219,7 @@
 		padding: 0 var(--margin);
 	}
 	@media (min-width: 924px) {
-		.familia>img, .familia>h2, .familia>p {
+		.familia>img, .familia>h2 {
 			max-width: 540px;
 			margin: auto;
 		}
