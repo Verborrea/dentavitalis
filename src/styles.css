@@ -32,6 +32,7 @@
 
 html, body {
     overflow-x: hidden;
+    background-color: var(--white);
 }
 
 h1, h2, p {
@@ -39,7 +40,7 @@ h1, h2, p {
 }
 h1 {
     font-size: 40px;
-    line-height: 38px;
+    line-height: 40px;
     letter-spacing: -0.04em;
 }
 h2 {

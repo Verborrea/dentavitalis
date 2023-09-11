@@ -7,7 +7,7 @@
     <div class="horizontal">
         <div class="img-div">
             <img src={white_logo} alt="Logo Denta Vitalis">
-            <a href="/" class="button variation2">Reserva tu cita ahora</a>
+            <a href="https://wa.me/+51986218962?text=Buenas,%20quisiera%20reservar%20una%20cita%20para%20el%20..." target="_blank" class="button variation2">Reserva tu cita ahora</a>
         </div>
         <address>
             <h3>
@@ -143,6 +143,8 @@
 
         background-color: var(--teal);
         color: var(--white);
+        position: relative;
+        z-index: 999999;
     }
     p a {
         text-decoration: none;
@@ -177,7 +179,7 @@
     svg {
         transition: transform 1s ease;
     }
-    svg:hover {
+    .media>a:hover svg{
         transform: rotate(360deg);
     }
     .media a div {
@@ -251,7 +253,7 @@
             align-items: center;
             color: white;
             text-decoration: none;
-            font-weight: bold;
+            font-size: 14px;
         }
         .media a div {
             display: block;

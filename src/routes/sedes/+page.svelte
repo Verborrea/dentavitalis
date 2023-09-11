@@ -75,6 +75,7 @@
 		width: calc(50% - 32px);
 		height: 600px;
 		object-fit: cover;
+		box-shadow: #0000003d 0px 4px 4px 0px;
 	}
 	.main-text {
 		display: flex;
