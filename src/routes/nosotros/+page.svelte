@@ -1,13 +1,15 @@
 <script>
     import nosotros from "$lib/images/nosotros.jpg";
     import dentadura from "$lib/images/dentadura.jpg";
+    import smile from "$lib/images/smile.svg";
     import Doctor from "./Doctor.svelte";
 </script>
 
 
 <section class="header">
-    <div class="frame">
-        <div>
+    <div class="frame p24 fcol">
+        <img src={nosotros} alt="Dentista" />
+        <div class="fcol">
             <h1>
                 Nuestro lema:
                 <strong>Odontología</strong>
@@ -18,13 +20,12 @@
                 para asegurarnos de brindarte el mejor tratamiento.
             </p>
         </div>
-        <img src={nosotros} alt="Dentista" />
     </div>
     <div class="spacer" />
 </section>
 
-<section class="mision-vision">
-    <article>
+<section class="mision-vision fcol">
+    <article class="fcol p24">
         <svg width="318" height="120" viewBox="0 0 318 120" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M125.725 113.335H122.531V53.7253H173.642C174.489 53.7253 175.302 53.3948 175.901 52.8063C176.5 52.2179 176.836 51.42 176.836 50.5879V3.52786C176.836 2.6957 176.5 1.89779 175.901 1.30941C175.302 0.721042 174.489 0.390503 173.642 0.390503H119.336C118.489 0.390503 117.676 0.721042 117.078 1.30941C116.478 1.89779 116.142 2.6957 116.142 3.52786V113.335H112.947C112.1 113.335 111.288 113.665 110.689 114.254C110.09 114.842 109.753 115.64 109.753 116.472C109.753 117.304 110.09 118.102 110.689 118.691C111.288 119.279 112.1 119.609 112.947 119.609H125.725C126.573 119.609 127.385 119.279 127.984 118.691C128.583 118.102 128.92 117.304 128.92 116.472C128.92 115.64 128.583 114.842 127.984 114.254C127.385 113.665 126.573 113.335 125.725 113.335Z" fill="#0FB3B2" />
             <path d="M202.392 16.0771H186.42C185.572 16.0771 184.76 16.4077 184.161 16.996C183.562 17.5844 183.225 18.3825 183.225 19.2144V56.8626C183.225 57.6946 182.889 58.4927 182.29 59.081C181.691 59.6693 180.878 59.9999 180.031 59.9999H148.086C147.239 59.9999 146.427 60.3304 145.828 60.9187C145.228 61.5071 144.892 62.3052 144.892 63.1372V66.2746C144.892 67.1066 145.228 67.9047 145.828 68.493C146.427 69.0814 147.239 69.4119 148.086 69.4119H202.392C203.24 69.4119 204.052 69.0814 204.65 68.493C205.25 67.9047 205.585 67.1066 205.585 66.2746V19.2144C205.585 18.3825 205.25 17.5844 204.65 16.996C204.052 16.4077 203.24 16.0771 202.392 16.0771Z" fill="#0FB3B2" />
@@ -40,7 +41,7 @@
             acogedor para nuestros pacientes.
         </p>
     </article>
-    <article>
+    <article class="fcol p24">
         <svg width="318" height="116" viewBox="0 0 318 116" fill="none" xmlns="http://www.w3.org/2000/svg" >
             <path d="M291.971 66.0683L291.961 66.1039L291.95 66.1395L288.251 79.1596L284.578 66.233L284.567 66.1972L284.558 66.1618C283.893 63.9879 282.157 62.3067 280.007 61.6733L279.973 61.6631L279.939 61.6536L267 58.1076L279.939 54.5618L279.973 54.5524L280.007 54.5421C282.157 53.9085 283.893 52.2275 284.558 50.0536L284.567 50.018L284.578 49.9824L288.266 37L291.952 49.8946L291.961 49.9274L291.971 49.9601C292.635 52.134 294.371 53.8152 296.521 54.4486L296.556 54.4588L296.59 54.4683L309.528 58.0143L296.59 61.5601L296.556 61.5695L296.521 61.5798C294.371 62.2132 292.635 63.8944 291.971 66.0683Z" fill="#155A7E" stroke="#155A7E" stroke-width="4" />
             <path d="M32.9709 66.0683L32.9601 66.1039L32.9499 66.1395L29.2502 79.1596L25.5772 66.233L25.5669 66.1972L25.5561 66.1618C24.8921 63.9879 23.1568 62.3067 21.0067 61.6733L20.972 61.6631L20.9374 61.6536L8 58.1076L20.9374 54.5618L20.972 54.5524L21.0067 54.5421C23.1568 53.9085 24.8921 52.2275 25.5561 50.0536L25.5669 50.018L25.5772 49.9824L29.2661 37L32.9516 49.8946L32.9608 49.9274L32.9709 49.9601C33.6349 52.134 35.3703 53.8152 37.5203 54.4486L37.5548 54.4588L37.5896 54.4683L50.527 58.0143L37.5896 61.5601L37.5548 61.5695L37.5203 61.5798C35.3703 62.2132 33.6349 63.8944 32.9709 66.0683Z" fill="#155A7E" stroke="#155A7E" stroke-width="4" />
@@ -57,9 +58,10 @@
     </article>
 </section>
 
-<section id="3d">
-    <div>Soluciones modernas</div>
-    <h1>Utilizamos tecnología 3D</h1>
+<section id="tech" class="fcol p24">
+    <img src={dentadura} alt="Dentadura" />
+    <p><strong>Soluciones modernas</strong></p>
+    <h2>Utilizamos tecnología <strong>3D</strong></h2>
     <p>
         La impresión en 3D para dientes, también conocida como impresión dental
         3D o fabricación aditiva dental, es una tecnología innovadora que se
@@ -67,7 +69,6 @@
         modelos de estudio, alineadores transparentes y otros dispositivos
         dentales de manera precisa y eficiente.
     </p>
-    <img src={dentadura} alt="Dentadura" />
 </section>
 
 <section>
@@ -115,8 +116,9 @@
     </ol>
 </section>
 
-<section>
-    <h1>Conoce a nuestra familia</h1>
+<section class="familia">
+    <img src={smile} alt="Icono con sonrisa y estrellas" />
+    <h2>Conoce a nuestra <strong>familia</strong></h2>
     <Doctor>
         <img slot="img" src={nosotros} alt={"fas"}>
         <h1 slot="nombre">Dra. Yesenia Flores</h1>
@@ -160,17 +162,15 @@
 
 
 <style>
-    .frame, .frame>div, .mision-vision > article {
+    .frame, .frame>div, .mision-vision > article, #tech {
         display: flex;
         gap: 16px;
     }
-    .frame>div, .mision-vision, .mision-vision > article {
+    .fcol {
         flex-direction: column;
     }
     .header > .frame {
         width: 100%;
-        flex-direction: column-reverse;
-        padding: 24px;
         background-color: var(--teal);
         color: var(--white);
     }
@@ -193,7 +193,26 @@
         display: flex;
         gap: 64px;
     }
-    .mision-vision > article {
+    .p24 {
         padding: 24px;
     }
+    .mision-vision svg {
+        width: 120px;
+        height: auto;
+        margin: auto;
+    }
+    /* ==================== */
+    .familia {
+		align-items: center;
+		text-align: center;
+	}
+	.familia > * {
+		padding: 0 var(--margin);
+	}
+	@media (min-width: 924px) {
+		.familia>img, .familia>h2, .familia>p {
+			max-width: 540px;
+			margin: auto;
+		}
+	}
 </style>

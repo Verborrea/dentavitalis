@@ -45,7 +45,7 @@
 				Contamos con impresoras 3D y más modernos equipos de vanguardia en para
 				lograr un mejor diagnóstico y diseño de sonrisa.
 			</p>
-			<a class="button variation2" href="/nosotros#3d">Conozca más aquí &gt; </a>
+			<a class="button variation2" href="/nosotros#tech">Conozca más aquí &gt; </a>
 		</div>
 	</section>
 </div>

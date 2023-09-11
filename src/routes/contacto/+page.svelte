@@ -119,20 +119,20 @@
         transform: translate(0, -50%);
         z-index: 1000;
         width: 480px;
-        padding: 18px;
+        padding: 16px;
         margin: 0 16px;
         background-color: var(--teal);
         color: var(--white);
         border-radius: 32px;
     }
     form {
-        padding: 18px;
+        padding: 24px 15px;
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 24px;
         border: 1px solid var(--white);
-        border-radius: 32px;
+        border-radius: 20px;
     }
     label {
         display: flex;
@@ -172,6 +172,7 @@
             transform: translate(0,0);
             width: calc(100% - 48px);
             margin: 24px;
+            padding: 12px;
         }
         .map {
             position: relative;
@@ -180,6 +181,10 @@
             height: auto;
             margin: 24px;
             border-radius: 32px;
+        }
+        .container form {
+            padding: 11px;
+            border-radius: 22px;
         }
     }
     @media (max-width: 1080px) {
