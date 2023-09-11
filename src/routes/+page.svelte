@@ -20,7 +20,7 @@
 			En <strong class="white">DENTA VITALIS</strong> te brindamos la atención y el seguimiento
 			que te mereces.
 		</p>
-		<a class="button blur" href="/"> Reserva tu cita ahora &gt; </a>
+		<a class="button blur" href="https://wa.me/+51986218962?text=Buenas,%20quisiera%20reservar%20una%20cita%20para%20el%20..." target="_blank"> Reserva tu cita ahora &gt; </a>
 	</div>
 </section>
 <section id="second" class="article">
@@ -31,7 +31,7 @@
 			Más de 9 años a tu lado. Contamos con un equipo altamente calificado
 			para asegurarnos de brindarte el mejor tratamiento.
 		</p>
-		<a class="button variation" href="/">más info sobre nosotros &gt; </a>
+		<a class="button variation" href="/nosotros">más info sobre nosotros &gt; </a>
 	</div>
 	<Image src={dentist} alt="Dentista principal" />
 </section>
@@ -45,7 +45,7 @@
 				Contamos con impresoras 3D y más modernos equipos de vanguardia en para
 				lograr un mejor diagnóstico y diseño de sonrisa.
 			</p>
-			<a class="button variation2" href="/">conozca más aquí &gt; </a>
+			<a class="button variation2" href="/nosotros#3d">conozca más aquí &gt; </a>
 		</div>
 	</section>
 </div>
@@ -113,7 +113,7 @@
 					Odontopediatría</li>
 			</ul>
 		</div>
-		<a href="/" class="button variation2">ver más &gt;</a>
+		<a href="/servicios" class="button variation2">ver más &gt;</a>
 	</div>
 </section>
 <Map />
