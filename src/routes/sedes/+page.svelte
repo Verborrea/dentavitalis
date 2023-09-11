@@ -8,9 +8,11 @@
 <img class="background" src={background} alt="Fondo">
 <article>
 	<div id="ejercito" class="sede">
-		<img
+		<div class="img-container">
+			<img
 			src={sede_1}
-			alt="Consultorio odontológico Denta Vitalis - Sede Av. Ejército">
+			alt="Consultorio odontológico Denta Vitalis - Sede Av. Ejército" />
+		</div>
 		<div class="main-text">
 			<svg width="136" height="43" viewBox="0 0 136 43" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<path d="M120.728 24.5639L119.267 29.7564L117.817 24.6012L117.813 24.5874L117.809 24.5737C117.552 23.7223 116.874 23.0497 116.015 22.7942L116.001 22.7901L115.987 22.7863L110.771 21.3424L115.987 19.8985L116.001 19.8946L116.015 19.8905C116.874 19.6351 117.552 18.9625 117.809 18.1111L117.813 18.0974L117.817 18.0836L119.274 12.906L120.729 18.0484L120.733 18.0611L120.737 18.0738C120.994 18.9251 121.672 19.5978 122.53 19.8532L122.544 19.8573L122.558 19.8612L127.775 21.3051L122.558 22.7489L122.544 22.7528L122.53 22.7569C121.672 23.0123 120.994 23.685 120.737 24.5363L120.732 24.55L120.728 24.5639Z" fill="white" stroke="white" stroke-width="4"/>
@@ -28,9 +30,11 @@
 </article>
 <article>
 	<div id="malvinas" class="sede">
-		<img
-			src={sede_2}
-			alt="Consultorio odontológico Denta Vitalis - Sede las Malvinas">
+		<div class="img-container">
+			<img
+				src={sede_2}
+				alt="Consultorio odontológico Denta Vitalis - Sede las Malvinas">
+		</div>
 		<div class="main-text">
 			<svg width="136" height="43" viewBox="0 0 136 43" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<path d="M120.728 24.5639L119.267 29.7564L117.817 24.6012L117.813 24.5874L117.809 24.5737C117.552 23.7223 116.874 23.0497 116.015 22.7942L116.001 22.7901L115.987 22.7863L110.771 21.3424L115.987 19.8985L116.001 19.8946L116.015 19.8905C116.874 19.6351 117.552 18.9625 117.809 18.1111L117.813 18.0974L117.817 18.0836L119.274 12.906L120.729 18.0484L120.733 18.0611L120.737 18.0738C120.994 18.9251 121.672 19.5978 122.53 19.8532L122.544 19.8573L122.558 19.8612L127.775 21.3051L122.558 22.7489L122.544 22.7528L122.53 22.7569C121.672 23.0123 120.994 23.685 120.737 24.5363L120.732 24.55L120.728 24.5639Z" fill="black" stroke="black" stroke-width="4"/>
@@ -49,11 +53,15 @@
 
 
 <style>
+	article {
+		position: relative;
+		z-index: 1;
+	}
 	.background {
 		width: 100%;
 		height: 770px;
 		position: absolute;
-		z-index: -999;
+		z-index: 0;
 		object-fit: cover;
 	}
 	.sede {
@@ -71,8 +79,8 @@
 	.sede>div {
 		width: calc(50% - 32px);
 	}
-	.sede>img {
-		width: calc(50% - 32px);
+	.sede img {
+		width: 100%;
 		height: 600px;
 		object-fit: cover;
 		box-shadow: #0000003d 0px 4px 4px 0px;
@@ -126,11 +134,12 @@
 		div.sede>* {
 			width: 100%;
 		}
-		#ejercito img {
-			border-radius: 48px; height: 400px; padding: 24px;
+		.img-container {
+			padding: 24px;
 		}
-		#malvinas img {
-			border-radius: 48px; height: 400px; padding: 24px;
+		#ejercito img, #malvinas img {
+			border-radius: 48px;
+			height: 400px;
 		}
 		div.main-text {
 			padding: 0 24px !important;

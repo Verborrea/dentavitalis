@@ -31,7 +31,7 @@
 			Más de 9 años a tu lado. Contamos con un equipo altamente calificado
 			para asegurarnos de brindarte el mejor tratamiento.
 		</p>
-		<a class="button variation" href="/nosotros">más info sobre nosotros &gt; </a>
+		<a class="button variation" href="/nosotros">Más sobre nosotros &gt; </a>
 	</div>
 	<Image src={dentist} alt="Dentista principal" />
 </section>
@@ -45,7 +45,7 @@
 				Contamos con impresoras 3D y más modernos equipos de vanguardia en para
 				lograr un mejor diagnóstico y diseño de sonrisa.
 			</p>
-			<a class="button variation2" href="/nosotros#3d">conozca más aquí &gt; </a>
+			<a class="button variation2" href="/nosotros#3d">Conozca más aquí &gt; </a>
 		</div>
 	</section>
 </div>
@@ -113,7 +113,7 @@
 					Odontopediatría</li>
 			</ul>
 		</div>
-		<a href="/servicios" class="button variation2">ver más &gt;</a>
+		<a href="/servicios" class="button variation2">Ver más &gt;</a>
 	</div>
 </section>
 <Map />
@@ -166,12 +166,14 @@
 		padding: 0 var(--margin);
 	}
 	#second h1 {
-		font-size: 52px;
-		line-height: 52px;
-	}
-	#second h1::first-line {
+		/* font-size: 52px;
+		line-height: 52px; */
 		font-size: 40px;
 		line-height: 38px;
+		color: var(--teal);
+	}
+	#second h1::first-line {
+		color: black;
 	}
 	@media (min-width: 924px) {
 		#second {
