@@ -119,10 +119,8 @@
 <section class="familia">
     <img src={smile} alt="Icono con sonrisa y estrellas" />
     <h2>Conoce a nuestra <strong>familia</strong></h2>
-    <Doctor>
+    <Doctor nombre="Dr. José Enmanuel Pacheco" especialidad="Ortodoncia">
         <img slot="img" src={nosotros} alt={"fas"}>
-        <h1 slot="nombre">Dra. Yesenia Flores</h1>
-        <p slot="especialidad">Especialista en: Ortodoncia</p>
         Sed lacinia molestie ipsum non commodo. Morbi non lacus in lacus
         pharetra tristique. Cras ullamcorper lacinia massa, sit amet suscipit
         felis. Vestibulum pulvinar augue. A justo feugiat venenatis. Maecenas
@@ -132,10 +130,8 @@
         accumsan vitae. Vivamus a neque non tortor bibendum molestie nec et
         sapien.
     </Doctor>
-    <Doctor>
+    <Doctor nombre="Dr. José Enmanuel Pacheco" especialidad="Ortodoncia">
         <img slot="img" src={nosotros} alt={"fas"}>
-        <h1 slot="nombre">Dr. José Enmanuel Pacheco</h1>
-        <p slot="especialidad">Especialista en: Ortodoncia</p>
         Sed lacinia molestie ipsum non commodo. Morbi non lacus in lacus
         pharetra tristique. Cras ullamcorper lacinia massa, sit amet suscipit
         felis. Vestibulum pulvinar augue. A justo feugiat venenatis. Maecenas
@@ -145,10 +141,8 @@
         accumsan vitae. Vivamus a neque non tortor bibendum molestie nec et
         sapien.
     </Doctor>
-    <Doctor>
+    <Doctor nombre="Dr. José Enmanuel Pacheco" especialidad="Ortodoncia">
         <img slot="img" src={nosotros} alt={"fas"}>
-        <h1 slot="nombre">Dr. José Enmanuel Pacheco</h1>
-        <p slot="especialidad">Ortodoncia</p>
         Sed lacinia molestie ipsum non commodo. Morbi non lacus in lacus
         pharetra tristique. Cras ullamcorper lacinia massa, sit amet suscipit
         felis. Vestibulum pulvinar augue. A justo feugiat venenatis. Maecenas

@@ -30,11 +30,6 @@
     box-sizing: border-box;
 }
 
-html, body {
-    overflow-x: hidden;
-    background-color: var(--white);
-}
-
 h1, h2, p {
     margin: 0;
 }
