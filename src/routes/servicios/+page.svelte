@@ -1,5 +1,28 @@
 <script>
-	import servicios from '$lib/images/servicios.jpg'
+	import { page } from '$app/stores'
+	import { slide } from 'svelte/transition'
+	import { quintOut } from 'svelte/easing'
+	import src from '$lib/images/servicios.jpg'
+    import Card from '../sedes/Card.svelte'
+
+	const servicios = [
+		{id: 0, clicked: true, tag: "Estética dental", href: "estetica"},
+		{id: 1, clicked: false, tag: "Rehabilitación dental", href: "rehabilitacion"},
+		{id: 2, clicked: false, tag: "Tratamientos de conducto dental", href: "conducto"},
+		{id: 3, clicked: false, tag: "Cirugía oral", href: "cirugia"},
+		{id: 4, clicked: false, tag: "Prevención dental", href: "prevencion"},
+		{id: 5, clicked: false, tag: "Periodoncia", href: "periodoncia"},
+		{id: 6, clicked: false, tag: "Implantes dentales", href: "implantes"},
+		{id: 7, clicked: false, tag: "Ortodoncia", href: "ortodoncia"},
+		{id: 8, clicked: false, tag: "Odontopediatría", href: "odontopediatria"},
+	];
+
+	let clicked = 0
+
+	for (const servicio of servicios) {
+		if ($page.url.hash === '#' + servicio.href)
+			clicked = servicio.id
+	}
 </script>
 
 
@@ -19,10 +42,31 @@
 		<a href="/" class="button variation">Reserva tu cita ahora &gt;</a>
 	</div>
 	<div class="image-container">
-		<img src={servicios} alt="Aquí viene el texto alternativo de los servicios" height="419">
+		<img {src} alt="Aquí viene el texto alternativo de los servicios" height="419">
 	</div>
 </section>
 
+<ul>
+{#each servicios as servicio (servicio.id)}
+	<li>
+		<button
+			type="button"
+			id={servicio.href}
+			class:clicked={clicked == servicio.id}
+			on:click={() => { clicked = (clicked != servicio.id) ? servicio.id : -1}}
+		>
+			{servicio.tag}
+		</button>
+		{#if clicked == servicio.id}
+			<div class="cards" transition:slide={{ duration: 300, easing: quintOut, axis: 'x' }}>
+				<Card name="Blanqueamiento"/>
+				<Card name="Blanqueamiento"/>
+				<Card name="Blanqueamiento"/>
+			</div>
+		{/if}
+	</li>
+{/each}
+</ul>
 
 <style>
 	section, .text-container {
@@ -46,7 +90,46 @@
 		border-radius: 48px;
 		box-shadow: #0000003d 0px 4px 4px 0px;
 	}
+	button {
+		border: none;
+		padding: 16px;
+		font-size: 24px;
+		line-height: 26px;
+		font-weight: bold;
+		background-color: transparent;
+		color: var(--teal);
+		text-align: left;
+		width: 100%;
+	}
+	button:hover {
+		text-decoration: underline;
+	}
+	button::before {
+		content: '+ ';
+	}
+	button.clicked::before {
+		content: '- ';
+	}
 
+	ul {
+		width: 100%;
+		max-width: 1080px;
+    	margin: auto;
+		list-style-type: none;
+	}
+
+	.cards {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+		padding: 0 16px;
+	}
+
+	@media (min-width: 450px) {
+		.cards {
+			flex-direction: row;
+		}
+	}
 	@media (min-width: 768px) {
 		section {
 			flex-direction: row;
@@ -56,6 +139,10 @@
 		}
 		section > * {
 			flex: 1;
+		}
+		button {
+			font-size: 36px;
+    		line-height: 38px;
 		}
 	}
 </style>
