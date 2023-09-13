@@ -57,6 +57,9 @@
 	a.primary[aria-current='true']::before {
 		background-color: var(--teal);
 	}
+	a.primary[aria-current='true']+svg>path {
+		stroke: var(--teal);
+	}
 
 	a.primary {
 		padding: 8px 0;

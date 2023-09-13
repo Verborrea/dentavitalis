@@ -117,8 +117,12 @@
 	</div>
 </section>
 <Map />
+<div class="final-padding"></div>
 
 <style>
+	.final-padding {
+		height: 0px;
+	}
 	.article {
 		display: flex;
 		flex-direction: column;
@@ -166,8 +170,6 @@
 		padding: 0 var(--margin);
 	}
 	#second h1 {
-		/* font-size: 52px;
-		line-height: 52px; */
 		font-size: 40px;
 		line-height: 38px;
 		color: var(--teal);
@@ -183,7 +185,7 @@
 			flex-direction: row;
 		}
 		#second>* {
-			flex-basis: 50%;
+			flex: 1;
 		}
 		#second h1 {
 			font-size: 64px;

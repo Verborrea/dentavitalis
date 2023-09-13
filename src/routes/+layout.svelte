@@ -202,9 +202,6 @@
 	}
 
 	@media (min-width: 768px) {
-		nav>.mobile {
-			display: none;
-		}
 		address > a:first-child {
 			display: block;
 		}
@@ -228,7 +225,7 @@
 		address {
 			justify-content: flex-end;
 		}
-		#burger-btn {
+		#burger-btn, nav>.mobile {
 			display: none;
 		}
 		nav>.desktop {

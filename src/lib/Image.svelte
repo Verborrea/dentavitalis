@@ -72,9 +72,9 @@
 		left: 0;
 		top: 0;
 	}
-	@media (min-width: 924px) {
+	@media (min-width: 768px) {
 		.container {
-			flex-basis: 50%;
+			flex: 1;
 		}
 		img {
 			height: 428px;
