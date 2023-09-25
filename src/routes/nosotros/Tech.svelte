@@ -85,9 +85,9 @@
         background-size: cover;
     }
     #tech-spacer-1 {
-        background-image: url("$lib/images/stacked-waves-top.svg");
+        background-image: url("$lib/svg/stacked-waves-top.svg");
     }
     #tech-spacer-2 {
-        background-image: url("$lib/images/stacked-waves-bottom.svg");
+        background-image: url("$lib/svg/stacked-waves-bottom.svg");
     }
 </style>

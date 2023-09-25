@@ -1,62 +1,58 @@
 <script>
 	import '../styles.css'
-	import logo from "$lib/images/logo.png";
-	import Option from './Option.svelte';
+	import logo from '$lib/images/logo.png'
+	import { page } from '$app/stores'
     import Footer from './Footer.svelte';
 
-	let isActive = false;
+	let isActive = false, width;
 
 	function burgerBtn() {
-		console.log("hl")
-		isActive = (isActive ? false : true);
+		if (isActive) {
+			document.body.style.overflow = 'auto'
+			isActive = false
+		} else {
+			window.scrollTo(0, 0);
+			document.body.style.overflow = 'hidden'
+			isActive = true
+		}
 	}
 
-	const servicios = [
-		{tag: "Estética dental", href: "estetica"},
-		{tag: "Rehabilitación dental", href: "rehabilitacion"},
-		{tag: "Tratamientos de conducto dental", href: "conducto"},
-		{tag: "Cirugía oral", href: "cirugia"},
-		{tag: "Prevención dental", href: "prevencion"},
-		{tag: "Periodoncia", href: "periodoncia"},
-		{tag: "Implantes dentales", href: "implantes"},
-		{tag: "Ortodoncia", href: "ortodoncia"},
-		{tag: "Odontopediatría", href: "odontopediatria"},
-	];
-	const sedes = [
-		{tag: "Av. Ejército", href: "ejercito"},
-		{tag: "Las Malvinas", href: "malvinas"}
-	];
+	let navLinks = [
+		{ href: "/", name: "Inicio" },
+		{ href: "/nosotros", name: "Nosotros" },
+		{ href: "/servicios", name: "Servicios" },
+		{ href: "/sedes", name: "Sedes" },
+		{ href: "/contacto", name: "Contáctanos" }
+	]
+
+	$: if (isActive && width > 767) {
+		document.body.style.overflow = 'auto'
+		isActive = false
+	}
 </script>
 
-<svelte:head>
-	<title>Denta Vitalis</title>
-</svelte:head>
+<svelte:window bind:innerWidth={width}/>
 
 <header>
-	<nav>
-		<a href="/"><img src={logo} alt="Denta Vitalis Logo" height="64" /></a>
-
+	<nav aria-label="Navegación principal" class="a1080 p16 space-between">
+		<a class="no-animation" href="/" title="Inicio">
+			<img src={logo} alt="Logo de Denta Vitalis" height="64">
+		</a>
+		<ul class:change={isActive}>
+			{#each navLinks as { href, name }}
+			{@const current = $page.url.pathname === href}
+				<li>
+					<a aria-current={current ? 'page' : false} on:click={burgerBtn}
+						{href}>{name}
+					</a>
+				</li>
+			{/each}
+		</ul>
 		<button id="burger-btn" class:change={isActive} on:click={burgerBtn} type="button" title="Menú">
 			<div class="bb" id="bb1" />
 			<div class="bb" id="bb2" />
 			<div class="bb" id="bb3" />
 		</button>
-
-		<ul class="mobile" class:change={isActive}>
-			<li on:click={burgerBtn}><Option href="/" >Inicio</Option></li>
-			<li on:click={burgerBtn}><Option href="/nosotros" >Nosotros</Option></li>
-			<li on:click={burgerBtn}><Option href="/servicios" list={servicios} >Servicios</Option></li>
-			<li on:click={burgerBtn}><Option href="/sedes" list={sedes}>Sedes</Option></li>
-			<li on:click={burgerBtn}><Option href="/contacto">Contáctanos</Option></li>
-		</ul>
-
-		<ul class="desktop">
-			<li><Option href="/">Inicio</Option></li>
-			<li><Option href="/nosotros">Nosotros</Option></li>
-			<li><Option href="/servicios" list={servicios}>Servicios</Option></li>
-			<li><Option href="/sedes" list={sedes}>Sedes</Option></li>
-			<li><Option href="/contacto">Contáctanos</Option></li>
-		</ul>
 	</nav>
 	<div class="address-container">
 		<address>
@@ -80,62 +76,69 @@
 <Footer />
 
 <style>
-	main {
-		display: flex;
-		flex-direction: column;
-		gap: 64px;
+	header {
+		background: white;
 	}
-	/* Nav =================================== */
-	nav>.desktop {
-		list-style: none;
-	}
-	nav>.mobile {
-		background-color: var(--white);
-		position: absolute;
-		z-index: 9999;
-		right: 0;
-		top: 80px;
-		margin: 0;
-		padding: 32px;
-		list-style: none;
-		border-radius: 0 0 0 16px;
-		transform-origin: right;
-		transform: scaleX(0);
-		transition: all 0.4s;
-		display: flex;
-		flex-direction: column;
-		box-shadow: #0000003d -4px 4px 4px 0px;
-		border-top: 1px solid var(--dark-gray);
-	}
-	nav>.mobile.change {
-		transform: scaleX(1);
-	}
-	main.change  {
-		filter: blur(4px);
-	}
-	nav>.desktop {
-		display: none;
-	}
-
-	/* Burger Btn ============================ */
 	nav {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-
 		height: 80px;
 	}
+	ul {
+		display: flex;
+		gap: 24px;
+		list-style: none;
+		align-items: center;
+	}
+	a {
+		position: relative;
+		display: block;
+		text-decoration: none;
+		color: var(--text);
+		font-weight: bold;
+	}
+
+	li>a::before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 3px;
+		background-color: black;
+		bottom: 0;
+		left: 0;
+		transform-origin: right;
+		transform: scaleX(0);
+		transition: transform .3s ease-in-out;
+	}
+	li>a:focus, li>a:active {
+		outline: transparent;
+	}
+	li>a:hover::before, li>a:focus::before, li>a:active::before {
+		transform-origin: left;
+		transform: scaleX(1);
+	}
+
+	a.no-animation:hover, a.no-animation:focus, a.no-animation:active {
+		transform: scale(1.05);
+	}	
+
+	/* address {
+		font-style: normal;
+		background-color: var(--teal);
+   		position: relative;
+		color: white;
+	} */
+
+	/* Burger Btn ============================ */
 	#burger-btn {
+		display: none;
+		position: absolute;
+		right: 16px;
 		padding: 10px 5px;
 		border: none;
 		background-color: transparent;
-		display: flex;
 		flex-direction: column;
 		align-items: flex-end;
 		gap: 3px;
-
-		position: absolute;
-		right: 16px;
+		z-index: 9999;
 	}
 	.bb {
 		height: 5px;
@@ -160,7 +163,38 @@
 	.change #bb3 {
 		transform: translate(0, -8px) rotate(45deg);
 		width: 36px;
-		background-color: var(--blue);
+		background-color: var(--teal);
+	}
+
+
+	@media (max-width: 767px){
+		address {
+			display: none;
+		}
+		nav {
+			justify-content: center;
+		}
+		nav>ul {
+			display: none;
+			position: absolute;
+			height: 100dvh;
+			width: 100dvw;
+			flex-direction: column;
+			justify-content: center;
+			top: 0;
+			left: 0;
+			background: white;
+			z-index: 999;
+		}
+		#burger-btn {
+			display: flex;
+		}
+		ul.change {
+			display: flex;
+		}
+		li>a {
+			font-size: 24px;
+		}
 	}
 
 	/* Headers =============================== */
@@ -216,7 +250,7 @@
 		}
 	}
 	@media (min-width: 924px) {
-		address, nav {
+		address {
 			padding: 0 16px;
 			max-width: 1080px;
 			margin: auto;
@@ -224,14 +258,6 @@
 		}
 		address {
 			justify-content: flex-end;
-		}
-		#burger-btn, nav>.mobile {
-			display: none;
-		}
-		nav>.desktop {
-			display: flex;
-			gap: 24px;
-			align-items: center;
 		}
 	}
 </style>

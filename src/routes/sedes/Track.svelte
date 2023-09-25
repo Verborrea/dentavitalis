@@ -1,7 +1,7 @@
 <script>
     import { onMount } from "svelte";
 
-    export let init_scroll
+    export let init_scroll, images
     let tracker, o_width, screenSize, percentage, margin = 0
 
     $: total = 2144 + screenSize
@@ -30,14 +30,9 @@
     bind:offsetWidth={o_width}
     style:margin-bottom={`${margin}px`}
 >
-    <img style:object-position={`${percentage}% 50%`} draggable="false" class="image" src="https://gacetadental.com/wp-content/uploads/2022/07/abrir-clinica-dental-documentacion.jpg" alt="img">
-    <img style:object-position={`${percentage}% 50%`} draggable="false" class="image" src="https://ceodont.com/wp-content/uploads/2021/07/partes-de-una-clinica-dental-1-1200x675.jpg" alt="img">
-    <img style:object-position={`${percentage}% 50%`} draggable="false" class="image" src="https://clinicadentalhenao.imq.es/hubfs/imq%20dental%20henao%20consulta.jpg" alt="img">
-    <img style:object-position={`${percentage}% 50%`} draggable="false" class="image" src="https://d1kw0nx8pk9xzh.cloudfront.net/0001/71526693/resize-crop(w=1027;h=578):sharpen(level=0):output(format=jpeg)/up/dt/2021/11/atikah-akhtar-XJptUS8nbhs-unsplash.jpg" alt="img">
-    <img style:object-position={`${percentage}% 50%`} draggable="false" class="image" src="https://asesorias.com/empresas/wp-content/uploads/2020/09/montar-clinica-dental.jpg" alt="img">
-    <img style:object-position={`${percentage}% 50%`} draggable="false" class="image" src="https://ceodont.com/wp-content/uploads/2021/07/gabinete-clinica-dental.jpg" alt="img">
-    <img style:object-position={`${percentage}% 50%`} draggable="false" class="image" src="https://enfoquedental.com/wp-content/uploads/2021/10/montar-una-clinica-dental.jpg" alt="img">
-    <img style:object-position={`${percentage}% 50%`} draggable="false" class="image" src="https://www.dvd-dental.com/blogodontomecum/wp-content/uploads/2019/12/distribuci%C3%B3n-clinica-dental.jpg" alt="img">
+{#each images as src}
+    <img style:object-position={`${percentage}% 50%`} draggable="false" class="image" {src} alt="img">
+{/each}
 </div>
 
 

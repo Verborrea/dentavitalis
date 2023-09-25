@@ -1,86 +1,50 @@
 <script>
-	import { onMount } from "svelte";
-	export let src, alt
-	let scroll, container, observer, isViewed, previousscroll, cool
-
-	let callback = (entries, _) => {
-		entries.forEach((entry) => {
-			isViewed = entry.isIntersecting
-			cool = previousscroll > scroll
-			previousscroll = scroll
-		});
-	};
-
-	onMount(() => {
-		let options = {
-			root: null,
-			rootMargin: "0px",
-			threshold: 0.0,
-		};
-		observer = new IntersectionObserver(callback, options);
-		observer.observe(container);
-	})
+	import Pbox from '../routes/Pbox.svelte'
+	export let src
 </script>
 
-<svelte:window bind:scrollY={scroll} />
-
-<div class="container" bind:this={container}>
-	<div
-		id="pbox1"
-		class="parallax"
-		style:top={isViewed ? (`${(scroll - previousscroll) / 1.5 + 342 * cool}px`): '0px'}
-	/>
-	<div
-		id="pbox2"
-		class="parallax"
-		style:top={isViewed ? (`${(scroll - previousscroll) / 3.5 + 342 * cool}px`): '0px'}
-	/>
-	<img {src} {alt} width="342" height="342" />
+<div class="img-container">
+	<Pbox --d="0" --w="200px" --h="200px" --i="auto auto 0 0" color="var(--teal)"/>
+	<Pbox --d="0.666s" --w="140px" --h="140px" --i="0 0 auto auto" color="var(--blue)"/>
+	<Pbox --d="0.333s" --w="80px"  --h="80px"  --i="auto 0 25% auto" color="var(--dark-blue)"/>
+	<img {src} alt="Dentista">
 </div>
 
 <style>
-	.container {
-		overflow: hidden;
-		position: relative;
-		width: 100%;
-		border-radius: 16px;
-		padding: 16px 0;
+.img-container {
+	position: relative;
+	flex: 1;
+	padding: 2em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.img-container img{
+	border-radius: 16px;
+	display: block;
+	width: 100%;
+	object-fit: cover;
+	filter: grayscale(1);
+	transform: scale(0.95);
+	transition: all 0.3s ease;
+}
+
+.img-container img:hover{
+	filter: grayscale(0);
+	transform: scale(1);
+}
+
+@media (max-width: 980px) {
+	.img-container img{
+		filter: grayscale(0);
+		transform: scale(1);
 	}
-	img {
-		border-radius: 16px;
-		display: block;
-		width: calc(100% - 32px);
-		object-fit: cover;
-		margin: auto;
+}
+
+@media (max-width: 767px) {
+	.img-container {
+		padding: 24px;
 	}
-	.parallax {
-		position: absolute;
-		border-radius: 16px;
-		z-index: -1;
-	}
-	#pbox1 {
-		background-color: var(--teal);
-		height: 100px;
-		width: 100px;
-		right: 0;
-		top: 0;
-	}
-	#pbox2 {
-		background-color: var(--blue);
-		height: 200px;
-		width: 200px;
-		left: 0;
-		top: 0;
-	}
-	@media (min-width: 768px) {
-		.container {
-			flex: 1;
-		}
-		img {
-			height: 428px;
-		}
-		#pbox1 {
-			top: -50%;
-		}
-	}
+}
 </style>

@@ -1,8 +1,24 @@
 <script>
-	import sede_1 from '$lib/images/sedes/sede-1.jpg'
-	import sede_2 from '$lib/images/sedes/sede-2.jpg'
-	import background from '$lib/images/sedes/rect.svg'
-    import Track from './Track.svelte';
+	import sede_1 from '$lib/images/sedes/main.webp'
+	import sede_2 from '$lib/images/sedes/2-main.webp'
+	import background from '$lib/svg/rect.svg'
+	import Track from './Track.svelte';
+
+	import s1_1 from '$lib/images/sedes/1.webp'
+	import s1_2 from '$lib/images/sedes/2.webp'
+	import s1_3 from '$lib/images/sedes/3.webp'
+	import s1_4 from '$lib/images/sedes/4.webp'
+	import s1_5 from '$lib/images/sedes/5.webp'
+	import s1_6 from '$lib/images/sedes/6.webp'
+
+	import s2_1 from '$lib/images/sedes/2-1.webp'
+	import s2_2 from '$lib/images/sedes/2-2.webp'
+	import s2_3 from '$lib/images/sedes/2-3.webp'
+	import s2_4 from '$lib/images/sedes/2-4.webp'
+	import s2_5 from '$lib/images/sedes/2-5.webp'
+
+	const sedes_1 = [ s1_1, s1_2, s1_3, s1_4, s1_5, sede_1, s1_6 ]
+	const sedes_2 = [ s2_1, s2_4, s2_3, s2_5, s2_2, sede_2 ]
 </script>
 
 <img class="background" src={background} alt="Fondo">
@@ -26,7 +42,7 @@
 			<p>Ortodoncia, Diseño de sonrisa, Odontología estética</p>
 		</div>
 	</div>
-	<Track init_scroll="false" />
+	<Track init_scroll="false" images={sedes_1}/>
 </article>
 <article>
 	<div id="malvinas" class="sede">
@@ -48,20 +64,21 @@
 			<p>Prótesis dentales, colocación de coronas y puentes</p>
 		</div>
 	</div>
-	<Track init_scroll="true" />
+	<Track init_scroll="true" images={sedes_2}/>
 </article>
 
 
 <style>
-	article {
-		position: relative;
-		z-index: 1;
+	:global(main) {
+		display: flex;
+		flex-direction: column;
+		gap: 96px;
 	}
 	.background {
 		width: 100%;
 		height: 770px;
 		position: absolute;
-		z-index: 0;
+		z-index: -10;
 		object-fit: cover;
 	}
 	.sede {

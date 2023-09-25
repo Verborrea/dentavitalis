@@ -1,6 +1,6 @@
 <script>
-    import nosotros from "$lib/images/nosotros.jpg";
-    import smile from "$lib/images/smile.svg";
+    import nosotros from "$lib/images/doc.webp";
+    import smile from "$lib/svg/smile.svg";
     import Doctor from "./Doctor.svelte";
     import Image from "../../lib/Image.svelte";
     import Tech from "./Tech.svelte";
@@ -111,6 +111,11 @@
 
 
 <style>
+    :global(main) {
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+    }
     .gradient {display: none;}
 
     .flex16 {
@@ -130,7 +135,7 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        background-image: url('$lib/images/stacked-waves-bottom.svg');
+        background-image: url('$lib/svg/stacked-waves-bottom.svg');
     }
     .header {
         background-color: var(--teal);

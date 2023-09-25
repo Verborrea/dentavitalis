@@ -1,5 +1,5 @@
 <script>
-    import location from '$lib/images/location.svg'
+    import location from '$lib/svg/location.svg'
     import mapboxgl from 'mapbox-gl'
     import '../mapbox.css'
     import { onMount, onDestroy } from "svelte"
@@ -81,6 +81,9 @@
 </section>
 
 <style>
+    section {
+		padding: 96px 16px;
+	}
     aside {
         background-image: url('$lib/images/background.png');
         margin: var(--margin);

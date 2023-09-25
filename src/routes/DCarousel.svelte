@@ -44,6 +44,7 @@
 		particlesToShow={cards}
 		initialPageIndex=1
 		arrows={false}
+		dots={false}
 	>
 		<div class="card-container"><div class="card">
 			<svg width="80" height="56" viewBox="0 0 80 56" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -109,6 +110,7 @@
 	}
 
 	.card {
+		-webkit-user-select: none;
 		user-select: none;
 		height: 342px;
 		list-style: none;

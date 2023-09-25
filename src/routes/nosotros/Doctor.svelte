@@ -37,7 +37,7 @@
 		gap: 12px;
 	}
 	article {
-		padding: 24px;
+		padding: 0;
 	}
 
 	@media (min-width: 768px) {

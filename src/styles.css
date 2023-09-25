@@ -30,10 +30,6 @@
     font-family: 'Poppins';
     box-sizing: border-box;
 }
-
-h1, h2, p {
-    margin: 0;
-}
 h1 {
     font-size: 40px;
     line-height: 40px;
@@ -54,7 +50,6 @@ a.button {
     text-decoration: none;
     color: var(--teal);
     font-weight: bold;
-    border: 1px solid var(--teal);
     padding: 8px 16px;
     border-radius: 22px;
 }
@@ -83,11 +78,40 @@ a.button.variation2:hover {
     color: white;
 }
 
+.a1080 {
+    max-width: 1080px;
+    margin: auto;
+}
+
+.p16 {
+    padding: 0 16px;
+}
+
+.flex-end-32 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 32px;
+    font-weight: bold;
+    height: 40px;
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
 .white {
     color: var(--white);
 }
 .marker {
-    background-image: url('$lib/images/marker.svg');
+    background-image: url('$lib/svg/marker.svg');
     background-size: cover;
     width: 50px;
     height: 50px;
@@ -117,6 +141,10 @@ a.button.variation2:hover {
     text-align: center;
 }
 
+.mapboxgl-ctrl-bottom-left .mapboxgl-ctrl {
+    margin: 10px !important;
+}
+
 .mapboxgl-ctrl-bottom-left, .mapboxgl-ctrl-bottom-right {
     top: 0 !important;
     bottom: auto !important;
@@ -140,5 +168,15 @@ a:hover {
     }
     p, a.button {
         font-size: 18px;
+    }
+}
+
+@keyframes scale {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(0.9);
     }
 }

@@ -1,40 +1,19 @@
 <script>
-	import chica from "$lib/images/chica.jpg";
-	import tools from "$lib/images/tools.svg";
-	import dentist from "$lib/images/doc.jpg";
 	import tech from "$lib/images/tech.jpg";
-	import smile from "$lib/images/smile.svg";
-
-	import Image from "$lib/Image.svelte";
+	import smile from "$lib/svg/smile.svg";
     import Carousel from "./DCarousel.svelte";
     import Map from "./Map.svelte";
+    import Section1 from "./Section1.svelte";
+	import Section2 from "./Section2.svelte";
+	import Button from '$lib/Button.svelte';
 </script>
 
+<svelte:head>
+	<title>Denta Vitalis</title>
+</svelte:head>
 
-
-<section id="first">
-	<img src={chica} alt="Chica sonriendo con dientes blancos" height="625" />
-	<div>
-		<h1>Cuidamos tu sonrisa con la mejor tecnología</h1>
-		<p>
-			En <strong class="white">DENTA VITALIS</strong> te brindamos la atención y el seguimiento
-			que te mereces.
-		</p>
-		<a class="button blur" href="https://wa.me/+51986218962?text=Buenas,%20quisiera%20reservar%20una%20cita%20para%20el%20..." target="_blank"> Reserva tu cita ahora &gt; </a>
-	</div>
-</section>
-<section id="second" class="article">
-	<div class="article">
-		<img src={tools} alt="Icono con herramientas de dentista" />
-		<h1>Odontología para todos!</h1>
-		<p>
-			Más de 9 años a tu lado. Contamos con un equipo altamente calificado
-			para asegurarnos de brindarte el mejor tratamiento.
-		</p>
-		<a class="button variation" href="/nosotros">Más sobre nosotros &gt; </a>
-	</div>
-	<Image src={dentist} alt="Dentista principal" />
-</section>
+<Section1></Section1>
+<Section2></Section2>
 <div class="thrid-container">
 	<div class="pre"></div>
 	<section id="third" class="article">
@@ -45,7 +24,9 @@
 				Contamos con impresoras 3D y más modernos equipos de vanguardia en para
 				lograr un mejor diagnóstico y diseño de sonrisa.
 			</p>
-			<a class="button variation2" href="/nosotros#tech">Conozca más aquí &gt; </a>
+			<Button href="/nosotros#tech" --bkg="var(--white)" --color="#14a4ae" --h_bkg="#e8fdff" --h_color="#14a4ae">
+				Conozca más aquí
+			</Button>
 		</div>
 	</section>
 </div>
@@ -121,7 +102,9 @@
 				</a></li>
 			</ul>
 		</div>
-		<a href="/servicios" class="button variation2">Ver más &gt;</a>
+		<Button href="/servicios" --bkg="var(--white)" --color="var(--teal)" --h_bkg="var(--blue)" --h_color="white">
+			Ver más
+		</Button>
 	</div>
 </section>
 <Map />
@@ -138,75 +121,9 @@
 		gap: 16px;
 	}
 /* ================================= */
-	#first {
-		position: relative;
-		color: var(--white);
-	}
-	#first img {
-		display: block;
-		object-fit: cover;
-		width: 100%;
-		height: 625px;
-		border-radius: 0 0 32px 32px;
-	}
-	#first > div {
-		position: absolute;
-		bottom: 0;
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		gap: 16px;
-		padding: var(--margin);
-	}
-	@media (min-width: 924px) {
-		#first > div {
-			max-width: 810px;
-			margin: auto;
-			padding: 16px;
-		}
-		#first > img {
-			border-radius: 0 0 48px 48px;
-		}
-	}
-	@media (min-width: 1100px) {
-		#first > div {
-			left: calc((100% - 1080px) / 2);
-		}
-	}
-/* ================================= */
-	#second {
-		padding: 0 var(--margin);
-	}
-	#second h1 {
-		font-size: 40px;
-		line-height: 38px;
-		color: var(--teal);
-	}
-	#second h1::first-line {
-		color: black;
-	}
-	@media (min-width: 924px) {
-		#second {
-			max-width: 1080px;
-			margin: auto;
-			padding: 0 16px;
-			flex-direction: row;
-		}
-		#second>* {
-			flex: 1;
-		}
-		#second h1 {
-			font-size: 64px;
-			line-height: 60px;
-		}
-		#second h1::first-line {
-			font-size: 48px;
-			line-height: 44px;
-		}
-	}
-/* ================================= */
 	#third {
 		padding: var(--margin);
+		margin-bottom: 96px;
 		background: linear-gradient(315deg, var(--teal), var(--blue));
 		color: var(--white);
 		border-radius: 0 0 48px 48px;
@@ -275,6 +192,7 @@
 	#fifth {
 		background-color: #87D9D9;
 		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%230fb3b2' fill-opacity='0.4'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+		margin-block: 96px auto;
 	}
 	.fifth-container {
 		display: flex;
