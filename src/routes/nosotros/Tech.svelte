@@ -1,5 +1,4 @@
 <script>
-    import dentadura from "$lib/images/nosotros/dentadura.png";
     import { onMount } from "svelte";
     import * as THREE from 'three';
 
@@ -71,9 +70,7 @@
 <div class="bg-teal">
     <div id="tech-spacer-1" />
     <section id="tech">
-        <div id="img-container">
-            <!-- <img src={dentadura} alt="Dentadura" width="322" height="331"/> -->
-        </div>
+        <div id="img-container" />
         <div class="text-container">
             <p><strong>Soluciones modernas</strong></p>
             <h2>Utilizamos tecnología <strong>3D</strong></h2>
@@ -103,13 +100,7 @@
         padding: 24px;
         color: var(--white);
     }
-    img {
-        display: block;
-        width: 80%;
-        height: auto;
-        margin: auto;
-    }
-    .img-container {
+    #img-container {
         display: flex;
         justify-content: center;
     }
@@ -130,9 +121,6 @@
         }
         #tech > *{
             flex: 1;
-        }
-        img {
-            width: 322px;
         }
         .text-container {
             justify-content: center;
