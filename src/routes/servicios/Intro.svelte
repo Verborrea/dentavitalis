@@ -1,5 +1,6 @@
 <script>
 	import src from '$lib/images/servicios.jpg'
+	import Button from '$lib/Button.svelte'
 </script>
 
 
@@ -16,7 +17,11 @@
 			imperfecciones cosméticas, restauración de implantes y hasta esas dolorosas
 			emergencias orales, DENTA VITALIS lo tiene cubierto.
 		</p>
-		<a href="/" class="button variation">Reserva tu cita ahora &gt;</a>
+		<Button
+			href="https://wa.me/+51986218962?text=Buenas,%20quisiera%20reservar%20una%20cita%20para%20el%20..."
+			target="_blank"
+			--bkg="var(--teal)" --color="var(--white)" --h_bkg="var(--blue)" --h_color="var(--white)"
+		>Reserva tu cita ahora</Button>
 	</div>
 	<div class="image-container">
 		<img {src} alt="Aquí viene el texto alternativo de los servicios" height="419">

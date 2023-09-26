@@ -6,7 +6,7 @@ export const categorias = [
 			{
 				img: '1',
 				name: 'Blanqueamiento',
-				content: 'Consiste en un tratamiento no invasivo que mejora la apariencia de los dientes, aclarándolos y dejándolos más blancos.'
+				content: 'El blanqueamiento dental es un tratamiento estético que busca aclarar y mejorar el color de los dientes. Utiliza agentes blanqueadores, como el peróxido de hidrógeno, para eliminar manchas y decoloraciones, proporcionando una sonrisa más brillante y rejuvenecida sin dañar la estructura dental.'
 			},
 			{
 				img: '2',
@@ -26,7 +26,7 @@ export const categorias = [
 			{
 				img: '5',
 				name: 'Restauracion con resina',
-				content: 'Consiste en un tratamiento no invasivo que mejora la apariencia de los dientes, aclarándolos y dejándolos más blancos.'
+				content: 'Es un procedimiento odontológico que utiliza compuestos de resina para reparar dientes dañados o cariados, ofreciendo un acabado estético y natural.'
 			}
 		]
 	},
@@ -37,27 +37,27 @@ export const categorias = [
 			{
 				img: '1',
 				name: 'Coronas de circonio',
-				content: 'Consiste en un tratamiento no invasivo que mejora la apariencia de los dientes, aclarándolos y dejándolos más blancos.'
+				content: 'Restauraciones dentales hechas de zirconia, un material cerámico resistente y estético, que cubren un diente dañado o tratado, restaurando su forma y función.'
 			},
 			{
 				img: '2',
 				name: 'Incrustaciones',
-				content: 'La restauración trata daños dentales sin caries, como erosión, abrasión y abfracción. Estas reparaciones protegen el diente y restauran su forma y función.'
+				content: 'Restauraciones indirectas hechas en laboratorio que se ajustan en cavidades de dientes dañados, ofreciendo una solución más conservadora y duradera que los empastes tradicionales.'
 			},
 			{
 				img: '3',
 				name: 'Prótesis fija',
-				content: 'Las carillas dentales son láminas delgadas que mejoran la apariencia dental al cubrir imperfecciones y lograr sonrisas estéticas.'
+				content: 'Estructura dental artificial que reemplaza uno o más dientes perdidos, fijada permanentemente a dientes pilares o implantes, sin poder ser retirada por el paciente.'
 			},
 			{
 				img: '4',
 				name: 'Prótesis removible',
-				content: 'El diseño de sonrisas trata daños dentales sin caries, como erosión, abrasión y abfracción. Estas reparaciones protegen el diente y más texto.'
+				content: 'Aparato dental que reemplaza dientes perdidos, que el paciente puede quitar y poner, facilitando la limpieza y el confort durante el sueño.'
 			},
 			{
 				img: '5',
 				name: 'Férulas miorelajantes',
-				content: 'Consiste en un tratamiento no invasivo que mejora la apariencia de los dientes, aclarándolos y dejándolos más blancos.'
+				content: 'Dispositivos orales diseñados para reducir la tensión en la mandíbula, comúnmente usados en trastornos de la ATM o bruxismo, ayudando a relajar los músculos y prevenir el desgaste dental.'
 			}
 		]
 	},
@@ -68,12 +68,12 @@ export const categorias = [
 			{
 				img: '1',
 				name: 'Endodoncias',
-				content: 'Consiste en un tratamiento no invasivo que mejora la apariencia de los dientes, aclarándolos y dejándolos más blancos.'
+				content: 'Las endodoncias son tratamientos dentales que eliminan la pulpa dañada o infectada del diente, salvándolo y previniendo infecciones futuras.'
 			},
 			{
 				img: '2',
 				name: 'Pernos',
-				content: 'La restauración trata daños dentales sin caries, como erosión, abrasión y abfracción. Estas reparaciones protegen el diente y restauran su forma y función.'
+				content: 'Los pernos son dispositivos metálicos insertados en raíces dentales tratadas con endodoncia, proporcionando soporte para restauraciones como coronas.'
 			}
 		]
 	},

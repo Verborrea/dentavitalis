@@ -1,8 +1,6 @@
 <script>
-    import nosotros from "$lib/images/doc.webp";
+    import nosotros from "$lib/images/nosotros/doc.webp";
     import smile from "$lib/svg/smile.svg";
-    import Doctor from "./Doctor.svelte";
-    import Image from "../../lib/Image.svelte";
     import Tech from "./Tech.svelte";
     import Funciona from "./Funciona.svelte";
 </script>
@@ -72,45 +70,89 @@
 <section class="familia">
     <img src={smile} alt="Icono con sonrisa y estrellas" />
     <h2>Conoce a nuestro <strong>equipo</strong></h2>
-    <div class="doc-container">
-        <Doctor nombre="Dra. Flora Tristán" especialidad="Ortodoncia">
-            <Image slot="img" src="https://assets.website-files.com/6178312e621dc29857e9c3e5/64aecff84a3a9dbab1d6a3dc_63e3cedeb40e370db6c149bc_Asset%202.webp" alt="Doctor José Enmanuel Pacheco"/>
-            Sed lacinia molestie ipsum non commodo. Morbi non lacus in lacus
-            pharetra tristique. Cras ullamcorper lacinia massa, sit amet suscipit
-            felis. Vestibulum pulvinar augue. A justo feugiat venenatis. Maecenas
-            erat lacus, fermentum nec odio bibendum, fermentum lobortis ipsum.
-            Phasellus ullamcorper mattis purus. Mauris ac massa pretium. Fermentum
-            est non, tempus turpis. Aenean tempor suscipit tortor, in varius nibh
-            accumsan vitae. Vivamus a neque non tortor bibendum molestie nec et
-            sapien.
-        </Doctor>
-        <Doctor nombre="Dr. José Enmanuel Pacheco" especialidad="Ortodoncia" reversed={true}>
-            <Image slot="img" src="https://assets.website-files.com/6178312e621dc29857e9c3e5/64aecff066aa8f5fdde3a9aa_619bedfeb4f8413fb079a6fe_Dr.%20Brendan%20Loehr%20DMD.webp" alt="Doctor José Enmanuel Pacheco"/>
-            Sed lacinia molestie ipsum non commodo. Morbi non lacus in lacus
-            pharetra tristique. Cras ullamcorper lacinia massa, sit amet suscipit
-            felis. Vestibulum pulvinar augue. A justo feugiat venenatis. Maecenas
-            erat lacus, fermentum nec odio bibendum, fermentum lobortis ipsum.
-            Phasellus ullamcorper mattis purus. Mauris ac massa pretium. Fermentum
-            est non, tempus turpis. Aenean tempor suscipit tortor, in varius nibh
-            accumsan vitae. Vivamus a neque non tortor bibendum molestie nec et
-            sapien.
-        </Doctor>
-        <Doctor nombre="Dra. Gina Medina" especialidad="Ortodoncia">
-            <Image slot="img" src="https://assets.website-files.com/6178312e621dc29857e9c3e5/64aecfc3e220e4c62ce83aac_618aae74ad45e021edb7ae39_Dr.%20Rose%20Duong%20DDS.webp" alt="Doctor José Enmanuel Pacheco"/>
-            Sed lacinia molestie ipsum non commodo. Morbi non lacus in lacus
-            pharetra tristique. Cras ullamcorper lacinia massa, sit amet suscipit
-            felis. Vestibulum pulvinar augue. A justo feugiat venenatis. Maecenas
-            erat lacus, fermentum nec odio bibendum, fermentum lobortis ipsum.
-            Phasellus ullamcorper mattis purus. Mauris ac massa pretium. Fermentum
-            est non, tempus turpis. Aenean tempor suscipit tortor, in varius nibh
-            accumsan vitae. Vivamus a neque non tortor bibendum molestie nec et
-            sapien.
-        </Doctor>
-    </div>
+	<div class="grinder a1080 p16">
+		<div id="first">Dra. Pilar Escobedo Zegarra</div>
+		<div id="second">Dr. Enmanuel Pacheco Chirinos</div>
+		<div id="third">Asis. Lorena Salazar Loaiza</div>
+	</div>
+    <div class="grinder a1080 p16">
+		<div id="fourth">Asis. Giovanna Villavicencio Ponce de León</div>
+		<div id="fifth">Dr. Sergio Cárdenas Zenteno</div>
+		<div id="sixth">Gda. Ana Belén Alva</div>
+	</div>
 </section>
 
 
 <style>
+
+	.grinder {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 300px 300px 300px;
+		gap: 32px;
+		margin: 96px auto;
+	}
+
+	.grinder > * {
+		border-radius: 32px;
+		display: flex;
+		align-items: flex-end;
+		justify-content: flex-start;
+		padding: 16px;
+		font-size: 24px;
+		font-weight: bold;
+		color: white;
+		box-shadow: inset #32323287 0px 0px 10px 5px;
+        --colorx: #001a19b3;
+		line-height: 28px;
+        transition: all 300ms ease;
+	}
+
+    .grinder > *:hover {
+        --colorx: #001211d3;
+        padding-bottom: 32px;
+    }
+
+	#first {
+		grid-row-start: 1;
+		grid-row-end: 1;
+		background-image: linear-gradient(0deg, var(--colorx) , transparent 75%), url(/src/lib/images/nosotros/doc_av_1.webp);
+		background-size: 116%;
+		background-position: 28% 14%;
+	}
+
+	#second {
+		grid-row-start: 2;
+		grid-row-end: 3;
+		background-image: linear-gradient(0deg, var(--colorx) , transparent 75%), url(/src/lib/images/nosotros/doc_av_3.webp);
+		background-position: 25%;
+    	background-size: cover;
+	}
+
+	#third {
+		background-image: linear-gradient(0deg, var(--colorx) , transparent 75%), url(/src/lib/images/nosotros/doc_av_2.webp);
+		background-size: 116%;
+		background-position: 28% 14%;
+	}
+
+    #fourth {
+		background-image: linear-gradient(0deg, var(--colorx) , transparent 75%), url(/src/lib/images/nosotros/doc_cayma_1.webp);
+		background-size: 116%;
+		background-position: 28% 14%;
+	}
+
+	#fifth {
+		background-image: linear-gradient(0deg, var(--colorx) , transparent 75%), url(/src/lib/images/nosotros/doc_cayma_2.webp);
+		background-position: 90%;
+    	background-size: cover;
+	}
+
+	#sixth {
+		background-image: linear-gradient(0deg, var(--colorx) , transparent 75%), url(/src/lib/images/nosotros/doc_cayma_3.webp);
+		background-size: 116%;
+		background-position: 0% 20%;
+	}
+
     :global(main) {
         display: flex;
         flex-direction: column;
@@ -172,6 +214,21 @@
 
 	@media (min-width: 768px) {
 
+		.grinder {
+			grid-template-columns: 3fr 2fr;
+			grid-template-rows: 330px 330px;
+		}	
+
+		#second {
+			grid-row-start: 1;
+			grid-row-end: 3;
+		}
+
+        #fifth {
+			grid-row-start: 1;
+			grid-row-end: 3;
+		}
+
         .gradient {
             display: block;
             position: absolute;
@@ -220,13 +277,6 @@
         }
         .mision-vision>article>* {
             flex: 1;
-        }
-
-        .doc-container {
-            display: flex;
-            flex-direction: column;
-            gap: 48px;
-            padding: 48px 0;
         }
 	}
 </style>

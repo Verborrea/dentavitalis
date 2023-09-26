@@ -16,12 +16,12 @@
 
 <div class="container">
 {#each data.cats as categoria}
-	<div class="categoria">
+	<div class="categoria" id={categoria.slug}>
 		<button
 			type="button"
 			on:click={()=>{ selected = (selected == categoria.slug) ? -1 : categoria.slug}}
 			aria-expanded={selected == categoria.slug}
-			aria-controls={categoria.name}
+			aria-controls={categoria.slug + '-body'}
 		>
 			<span>{categoria.name}</span>
 			{#if selected == categoria.slug}
@@ -35,7 +35,7 @@
 			{/if}
 		</button>
 		<div
-			id={categoria.slug} class="grid"
+			id={categoria.slug + '-body'} class="grid"
 			class:open={selected == categoria.slug}
 			aria-hidden={selected != categoria.slug}
 		>

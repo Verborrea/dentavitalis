@@ -7,7 +7,6 @@
 	<div class="text">
 		<h1>{servicio.name}</h1>
 		<p>{servicio.content}</p>
-		<a href="/">Ver más &gt;</a>
 	</div>
 </article>
 

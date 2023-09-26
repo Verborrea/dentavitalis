@@ -77,6 +77,7 @@
 
 <section class="a1080" id="contacto">
     <div>
+        asgfsa
     </div>
     <div class="container">
         <form action="">
@@ -152,6 +153,7 @@
 
     section {
         display: flex;
+        flex-direction: row;
         align-items: center;
         padding: 96px 16px;
     }

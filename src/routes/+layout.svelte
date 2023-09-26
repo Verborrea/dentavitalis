@@ -120,6 +120,14 @@
 		transform: scale(1.05);
 	}	
 
+	li>a[aria-current='page'] {
+		color: var(--teal);
+	}
+
+	li>a[aria-current='page']::before {
+		background-color: var(--teal);
+	}
+
 	/* address {
 		font-style: normal;
 		background-color: var(--teal);
