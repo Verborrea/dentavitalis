@@ -52,13 +52,15 @@
 
 <style>
     .grid {
-        display: grid; /* 1 */
-        grid-template-rows: 0fr; /* 2 */
-        transition: grid-template-rows 0.5s ease-in-out; /* 3 */
+        display: grid;
+        /* grid-template-rows: 0fr; */
+		max-height: 0;
+        transition: all 0.5s ease-in-out;
     }
 
     .grid.open {
-        grid-template-rows: 1fr; /* 5 */
+		max-height: 1000px;
+        /* grid-template-rows: 1fr; */
     }
 
     .container {
@@ -67,6 +69,10 @@
 		margin: auto;
 		margin-bottom: 64px;
     }
+
+	.categoria {
+		overflow: hidden;
+	}
 
 	.categoria button {
 		position: relative;

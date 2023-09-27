@@ -76,7 +76,7 @@
 </script>
 
 <section class="a1080" id="contacto">
-    <div>
+    <div style="opacity: 0;">
         asgfsa
     </div>
     <div class="container">
