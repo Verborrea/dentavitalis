@@ -1,5 +1,6 @@
 export const categorias = [
 	{
+		id: 0,
 		slug: 'estetica',
 		name: 'Estética Dental',
 		services: [
@@ -31,7 +32,8 @@ export const categorias = [
 		]
 	},
 	{
-		slug: 'rehabilitaicon',
+		id: 1,
+		slug: 'rehabilitacion',
 		name: 'Rehabilitación Dental',
 		services: [
 			{
@@ -62,6 +64,7 @@ export const categorias = [
 		]
 	},
 	{
+		id: 2,
 		slug: 'conducto-dental',
 		name: 'Tratamientos de conducto dental',
 		services: [
@@ -78,6 +81,7 @@ export const categorias = [
 		]
 	},
 	{
+		id: 3,
 		slug: 'cirugia',
 		name: 'Cirugía Oral',
 		services: [
@@ -100,6 +104,7 @@ export const categorias = [
 		]
 	},
 	{
+		id: 4,
 		slug: 'prevencion',
 		name: 'Prevención Dental',
 		services: [
@@ -121,6 +126,7 @@ export const categorias = [
 		]
 	},
 	{
+		id: 5,
 		slug: 'periodoncia',
 		name: 'Periodoncia',
 		services: [
@@ -153,6 +159,7 @@ export const categorias = [
 		]
 	},
 	{
+		id: 6,
 		slug: 'implantes',
 		name: 'Implantes Dentales',
 		services: [
@@ -174,6 +181,7 @@ export const categorias = [
 		]
 	},
 	{
+		id: 7,
 		slug: 'ortodoncia',
 		name: 'Ortodoncia',
 		services: [
@@ -206,6 +214,7 @@ export const categorias = [
 		]
 	},
 	{
+		id: 8,
 		slug: 'odontopediatria',
 		name: 'Odontopediatría',
 		services: [

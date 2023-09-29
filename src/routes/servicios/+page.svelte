@@ -2,11 +2,21 @@
 	import { page } from '$app/stores'
     import Card from './Card.svelte'
     import Intro from './Intro.svelte'
+	import img1 from '$lib/images/servicios/estetica.webp'
+	import img2 from '$lib/images/servicios/rehabilitacion.webp'
+	import img3 from '$lib/images/servicios/conducto-dental.webp'
+	import img4 from '$lib/images/servicios/cirugia.webp'
+	import img5 from '$lib/images/servicios/prevencion.webp'
+	import img6 from '$lib/images/servicios/periodoncia.webp'
+	import img7 from '$lib/images/servicios/implantes.webp'
+	import img8 from '$lib/images/servicios/ortodoncia.webp'
+	import img9 from '$lib/images/servicios/odontopediatria.webp'
 
 	export let data
 	let selected = 'estetica'
+	let images = [img1, img2, img3, img4, img5, img6, img7, img8, img9]
 
-	for (const categoria of data.cats) {
+	for (const categoria of data.categorias) {
 		if ($page.url.hash === '#' + categoria.slug)
 			selected = categoria.slug
 	}
@@ -15,7 +25,7 @@
 <Intro />
 
 <div class="container">
-{#each data.cats as categoria}
+{#each data.categorias as categoria (categoria.id)}
 	<div class="categoria" id={categoria.slug}>
 		<button
 			type="button"
@@ -23,14 +33,15 @@
 			aria-expanded={selected == categoria.slug}
 			aria-controls={categoria.slug + '-body'}
 		>
+			<img src={images[categoria.id]} alt={categoria.name} width="48"/>
 			<span>{categoria.name}</span>
 			{#if selected == categoria.slug}
 				<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M22 18L14 10L6 18" stroke="#0FB3B2" stroke-width="4" stroke-linecap="square"/>
+					<path d="M22 18L14 10L6 18" stroke="#009bb3" stroke-width="4" stroke-linecap="square"/>
 				</svg>
 			{:else}
 				<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M6 10L14 18L22 10" stroke="#0FB3B2" stroke-width="4" stroke-linecap="square"/>
+					<path d="M6 10L14 18L22 10" stroke="#009bb3" stroke-width="4" stroke-linecap="square"/>
 				</svg>
 			{/if}
 		</button>
@@ -53,22 +64,20 @@
 <style>
     .grid {
         display: grid;
-        /* grid-template-rows: 0fr; */
 		max-height: 0;
-        transition: all 0.5s ease-in-out;
+        transition: max-height 300ms ease-in-out;
     }
 
     .grid.open {
-		max-height: 1000px;
-        /* grid-template-rows: 1fr; */
+		max-height: 1300px;
     }
 
-    .container {
-        padding: 16px;
+	.container {
+		padding: 16px;
 		max-width: 1080px;
 		margin: auto;
 		margin-bottom: 64px;
-    }
+	}
 
 	.categoria {
 		overflow: hidden;
@@ -85,7 +94,7 @@
 		border: none;
 
 		background-color: transparent;
-		color: var(--teal);
+		color: #009bb3;
 
 		font-weight: bold;
 		text-align: left;
@@ -103,9 +112,14 @@
         column-gap: 16px;
     }
 
-	svg {
-		width: 14px;
-		height: 14px;
+	button>span {
+		flex: 8;
+	}
+
+	button>svg {
+		flex: 1;
+		width: 18px;
+		height: 18px;
 	}
 
 	@media (min-width: 900px) {
@@ -113,9 +127,9 @@
 			font-size: 36px;
     		line-height: 48px;
 		}
-		svg {
-			width: auto;
-			height: auto;
+		button>svg {
+			width: 28px;
+			height: 28px;
 		}
 	}
 </style>
