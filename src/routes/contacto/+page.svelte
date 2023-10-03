@@ -80,15 +80,15 @@
 <section>
 	<div class="content">
 		<div class="form-container">
-			<form action="">
+			<form method="post">
 				<h1>Contáctanos</h1>
 				<label for="nombre">
 					<p>Nombre completo:</p>
-					<input name="nombre" id="nombre" type="text" placeholder="ej: José Pérez">
+					<input name="nombre" id="nombre" type="text" placeholder="ej: José Pérez" required>
 				</label>
 				<label for="correo">
 					<p>Correo electrónico:</p>
-					<input name="correo" id="correo" type="email" placeholder="ej: ejemplo@123.com">
+					<input name="correo" id="correo" type="email" placeholder="ej: ejemplo@123.com" required>
 				</label>
 				<label for="telefono">
 					<p>Número de teléfono:</p>
@@ -96,7 +96,7 @@
 				</label>
 				<label for="razon">
 					<p>Razón o motivo:</p>
-					<textarea name="razon" id="razon" cols="40" rows="6" placeholder="Buenas, me gustaría preguntar sobre..."></textarea>
+					<textarea name="razon" id="razon" cols="40" rows="6" placeholder="Buenas, me gustaría preguntar sobre..." required></textarea>
 				</label>
 				<button type="submit">
 					Enviar

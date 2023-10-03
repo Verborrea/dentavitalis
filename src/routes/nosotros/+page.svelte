@@ -102,115 +102,127 @@
 		font-size: 24px;
 		font-weight: bold;
 		color: white;
-		box-shadow: inset #32323287 0px 0px 10px 5px;
-        --colorx: #001a19b3;
+		box-shadow: inset rgba(50, 50, 50, 0.25) 0px 0px 10px 5px;
+		--colorx: #001a19b3;
 		line-height: 28px;
-        transition: all 300ms ease;
+		transition: all 300ms ease;
 	}
 
-    .grinder > *:hover {
-        --colorx: #001211d3;
-        padding-bottom: 32px;
-    }
+	.grinder > *:hover {
+		--colorx: #001211d3;
+		padding-bottom: 32px;
+	}
 
 	#first {
 		grid-row-start: 1;
 		grid-row-end: 1;
 		background-image: linear-gradient(0deg, var(--colorx) , transparent 75%), url(/src/lib/images/nosotros/doc_av_1.webp);
-		background-size: 116%;
-		background-position: 28% 14%;
 	}
-
 	#second {
 		grid-row-start: 2;
 		grid-row-end: 3;
 		background-image: linear-gradient(0deg, var(--colorx) , transparent 75%), url(/src/lib/images/nosotros/doc_av_3.webp);
-		background-position: 25%;
-    	background-size: cover;
 	}
-
 	#third {
 		background-image: linear-gradient(0deg, var(--colorx) , transparent 75%), url(/src/lib/images/nosotros/doc_av_2.webp);
-		background-size: 116%;
-		background-position: 28% 14%;
 	}
-
-    #fourth {
+	#fourth {
 		background-image: linear-gradient(0deg, var(--colorx) , transparent 75%), url(/src/lib/images/nosotros/doc_cayma_1.webp);
-		background-size: 116%;
-		background-position: 28% 14%;
 	}
-
 	#fifth {
 		background-image: linear-gradient(0deg, var(--colorx) , transparent 75%), url(/src/lib/images/nosotros/doc_cayma_2.webp);
-		background-position: 90%;
-    	background-size: cover;
 	}
-
 	#sixth {
 		background-image: linear-gradient(0deg, var(--colorx) , transparent 75%), url(/src/lib/images/nosotros/doc_cayma_3.webp);
-		background-size: 116%;
-		background-position: 0% 20%;
 	}
 
-    :global(main) {
-        display: flex;
-        flex-direction: column;
-        gap: 64px;
-    }
-    .gradient {display: none;}
+	:global(main) {
+		display: flex;
+		flex-direction: column;
+		gap: 64px;
+	}
+	.gradient {display: none;}
 
-    .flex16 {
-        display: flex;
-        gap: 16px;
-    }
-    .fcol {
-        flex-direction: column;
-    }
-    .header > .frame {
-        width: 100%;
-        color: var(--white);
-    }
-    .spacer {
-        aspect-ratio: 900/100;
-        width: 100%;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        background-image: url('$lib/svg/stacked-waves-bottom.svg');
-    }
-    .header {
-        background-color: var(--teal);
-    }
-    .frame img {
-        border-radius: 32px;
-        position: relative;
-        z-index: 10;
-    }
-    .frame strong {
-        color: var(--dark-blue);
-    }
-    /* ==================== */
-    .mision-vision{
-        display: flex;
-        gap: 64px;
-    }
-    .p24 {
-        padding: 24px;
-    }
-    .mision-vision svg {
-        width: 120px;
-        height: auto;
-        margin: auto;
-    }
-    /* ==================== */
-    .familia {
+	.flex16 {
+		display: flex;
+		gap: 16px;
+	}
+	.fcol {
+		flex-direction: column;
+	}
+	.header > .frame {
+		width: 100%;
+		color: var(--white);
+	}
+	.spacer {
+		aspect-ratio: 900/100;
+		width: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		background-image: url('$lib/svg/stacked-waves-bottom.svg');
+	}
+	.header {
+		background-color: var(--teal);
+	}
+	.frame img {
+		border-radius: 32px;
+		position: relative;
+		z-index: 10;
+	}
+	.frame strong {
+		color: var(--dark-blue);
+	}
+	/* ==================== */
+	.mision-vision{
+		display: flex;
+		gap: 64px;
+	}
+	.p24 {
+		padding: 24px;
+	}
+	.mision-vision svg {
+		width: 120px;
+		height: auto;
+		margin: auto;
+	}
+	/* ==================== */
+	.familia {
 		align-items: center;
 		text-align: center;
 	}
 	.familia > * {
 		padding: 0 var(--margin);
 	}
+
+	#first, #third {
+		background-size: auto 110%;
+		background-position: 28% 14%;
+	}
+	#first:hover,
+	#third:hover { background-size: auto 125%; }
+
+
+	#second {
+		background-position: 25%;
+		background-size: auto 100%;
+	}
+	#second:hover { background-size: auto 110% }
+
+
+	#fourth, #sixth {
+		background-size: auto 110%;
+		background-position: 5% 14%;
+	}
+	#fourth:hover,
+	#sixth:hover { background-size: auto 125% }
+
+
+	#fifth {
+		background-position: 90%;
+		background-size: auto 100%;
+	}
+	#fifth:hover { background-size: auto 110% }
 
 	@media (min-width: 768px) {
 
@@ -224,59 +236,72 @@
 			grid-row-end: 3;
 		}
 
-        #fifth {
+		#fifth {
 			grid-row-start: 1;
 			grid-row-end: 3;
 		}
 
-        .gradient {
-            display: block;
-            position: absolute;
-            background: linear-gradient(to right, var(--dark-blue), var(--teal));
-            right: 0;
-            width: calc(50% - 48px);
-            top: -10px;
-            bottom: -10px;
-            border-radius: 32px;
-        }
+		.gradient {
+			display: block;
+			position: absolute;
+			background: linear-gradient(to right, var(--dark-blue), var(--teal));
+			right: 0;
+			width: calc(50% - 48px);
+			top: -10px;
+			bottom: -10px;
+			border-radius: 32px;
+		}
 
-        .frame {
-            position: relative;
-            flex-direction: row-reverse;
-            align-items: center;
-            gap: 32px;
-            padding: 16px;
-            max-width: 1080px;
-            margin: 96px auto 48px;
-        }
-        .frame>img, .frame>.flex16{
-            width: calc(50% - 16px);
-        }
+		.frame {
+			position: relative;
+			flex-direction: row-reverse;
+			align-items: center;
+			gap: 32px;
+			padding: 16px;
+			max-width: 1080px;
+			margin: 96px auto 48px;
+		}
+		.frame>img, .frame>.flex16{
+			width: calc(50% - 16px);
+		}
 		.familia>img, .familia>h2 {
 			max-width: 540px;
 			margin: auto;
 		}
 
-        .mision-vision {
-            max-width: 1080px;
-            margin: auto;
-        }
-        .mision-vision svg {
-            width: auto;
-            height: 120px;
-        }
-        .mision-vision>article:nth-child(1) {
-            flex-direction: row;
-            gap: 32px;
-            padding: 0 16px;
-        }
-        .mision-vision>article:nth-child(2) {
-            flex-direction: row-reverse;
-            gap: 32px;
-            padding: 16px;
-        }
-        .mision-vision>article>* {
-            flex: 1;
-        }
+		.mision-vision {
+			max-width: 1080px;
+			margin: auto;
+		}
+		.mision-vision svg {
+			width: auto;
+			height: 120px;
+		}
+		.mision-vision>article:nth-child(1) {
+			flex-direction: row;
+			gap: 32px;
+			padding: 0 16px;
+		}
+		.mision-vision>article:nth-child(2) {
+			flex-direction: row-reverse;
+			gap: 32px;
+			padding: 16px;
+		}
+		.mision-vision>article>* {
+			flex: 1;
+		}
+	}
+
+	@media (min-width: 480px) and (max-width: 767px) {
+		#first, #third, #second, #fourth, #sixth, #fifth {
+			background-size: 100% auto;
+			background-position: 28% 14%;
+		}
+		#first:hover,
+		#second:hover,
+		#third:hover,
+		#fourth:hover,
+		#fifth:hover,
+		#sixth:hover { background-size: 115% auto; }
 	}
 </style>

@@ -88,18 +88,18 @@ export const categorias = [
 			{
 				img: '1',
 				name: 'Exodoncia de terceros molares / cordales',
-				content: 'Consiste en un tratamiento no invasivo que mejora la apariencia de los dientes, aclarándolos y dejándolos más blancos.'
+				content: 'Procedimiento quirúrgico para extraer las muelas del juicio, que suelen causar molestias y problemas de espacio en la boca.'
 			},
 			{
 				img: '2',
 				name: 'Exodoncia de restos rediculares',
-				content: 'La restauración trata daños dentales sin caries, como erosión, abrasión y abfracción. Estas reparaciones protegen el diente y restauran su forma y función.'
+				content: 'Eliminación de raíces dentales fracturadas o dañadas que no pueden salvarse mediante otros tratamientos, evitando complicaciones futuras.'
 			}
 			,
 			{
 				img: '3',
 				name: 'Alveolitis',
-				content: 'La restauración trata daños dentales sin caries, como erosión, abrasión y abfracción. Estas reparaciones protegen el diente y restauran su forma y función.'
+				content: 'Condición dolorosa que puede surgir después de una extracción dental, donde se trata el vacío en el hueso alveolar para aliviar el malestar.'
 			}
 		]
 	},
@@ -111,17 +111,17 @@ export const categorias = [
 			{
 				img: '1',
 				name: 'Sellantes',
-				content: 'Consiste en un tratamiento no invasivo que mejora la apariencia de los dientes, aclarándolos y dejándolos más blancos.'
+				content: 'Capas protectoras de resina aplicadas en las superficies de los dientes para prevenir la formación de caries y mantener una sonrisa saludable.'
 			},
 			{
 				img: '2',
 				name: 'Flúor / Barniz',
-				content: 'La restauración trata daños dentales sin caries, como erosión, abrasión y abfracción. Estas reparaciones protegen el diente y restauran su forma y función.'
+				content: 'Aplicación de flúor o barniz dental para fortalecer el esmalte y proteger contra la erosión ácida y las caries.'
 			},
 			{
 				img: '3',
 				name: 'Profilaxis y descartaje',
-				content: 'La restauración trata daños dentales sin caries, como erosión, abrasión y abfracción. Estas reparaciones protegen el diente y restauran su forma y función.'
+				content: 'Procedimiento de limpieza dental profesional y evaluación de la salud oral para mantener una boca libre de problemas dentales.'
 			}
 		]
 	},
@@ -133,28 +133,28 @@ export const categorias = [
 			{
 				img: '1',
 				name: 'Control de enfermedad Periodontal',
-				content: 'Consiste en un tratamiento no invasivo que mejora la apariencia de los dientes, aclarándolos y dejándolos más blancos.'
+				content: 'Tratamiento especializado para abordar enfermedades de las encías, como gingivitis o periodontitis, y prevenir la pérdida de dientes.'
 			},
 			{
 				img: '2',
 				name: 'Gingivoplastía',
-				content: 'La restauración trata daños dentales sin caries, como erosión, abrasión y abfracción. Estas reparaciones protegen el diente y restauran su forma y función.'
+				content: 'Cirugía que remodela el tejido de las encías, mejorando la estética y reduciendo problemas estéticos o funcionales.'
 			}
 			,
 			{
 				img: '3',
 				name: 'Control de perdida osea',
-				content: 'La restauración trata daños dentales sin caries, como erosión, abrasión y abfracción. Estas reparaciones protegen el diente y restauran su forma y función.'
+				content: 'Abordaje de problemas que afectan el soporte óseo dental, incluyendo tratamientos para evitar la pérdida de hueso.'
 			},
 			{
 				img: '4',
 				name: 'Gingivectomía',
-				content: 'La restauración trata daños dentales sin caries, como erosión, abrasión y abfracción. Estas reparaciones protegen el diente y restauran su forma y función.'
+				content: 'Eliminación quirúrgica de exceso de encías, a menudo realizada para corregir problemas de apariencia o mordida.'
 			},
 			{
 				img: '5',
 				name: 'Movilidad dentaria',
-				content: 'La restauración trata daños dentales sin caries, como erosión, abrasión y abfracción. Estas reparaciones protegen el diente y restauran su forma y función.'
+				content: 'Evaluación y tratamiento de dientes móviles, a menudo causados por enfermedad periodontal u otros problemas dentales.'
 			}
 		]
 	},
@@ -166,17 +166,17 @@ export const categorias = [
 			{
 				img: '1',
 				name: 'Implante de carga inmediata',
-				content: 'Consiste en un tratamiento no invasivo que mejora la apariencia de los dientes, aclarándolos y dejándolos más blancos.'
+				content: 'Un procedimiento que permite la colocación de implantes dentales con dientes temporales en una sola cita, restaurando la función y la estética dental rápidamente.'
 			},
 			{
 				img: '2',
 				name: 'Implante de carga diferida',
-				content: 'La restauración trata daños dentales sin caries, como erosión, abrasión y abfracción. Estas reparaciones protegen el diente y restauran su forma y función.'
+				content: 'La instalación de implantes dentales seguida de un período de cicatrización antes de colocar los dientes artificiales, asegurando una integración óptima.'
 			},
 			{
 				img: '3',
 				name: 'Injerto de hueso',
-				content: 'La restauración trata daños dentales sin caries, como erosión, abrasión y abfracción. Estas reparaciones protegen el diente y restauran su forma y función.'
+				content: 'Una cirugía que implica la adición de tejido óseo para mejorar la calidad y cantidad de hueso disponible, esencial para el éxito de los implantes dentales.'
 			}
 		]
 	},
@@ -187,29 +187,29 @@ export const categorias = [
 		services: [
 			{
 				img: '1',
-				name: 'Brackets metalicos',
-				content: 'Consiste en un tratamiento no invasivo que mejora la apariencia de los dientes, aclarándolos y dejándolos más blancos.'
+				name: 'Brackets metálicos',
+				content: 'Dispositivos de ortodoncia tradicionales fabricados en metal, eficaces para corregir problemas de alineación dental.'
 			},
 			{
 				img: '2',
-				name: 'Brackets esteticos',
-				content: 'La restauración trata daños dentales sin caries, como erosión, abrasión y abfracción. Estas reparaciones protegen el diente y restauran su forma y función.'
+				name: 'Brackets estéticos',
+				content: 'Aparatos de ortodoncia que utilizan materiales translúcidos o del color del diente para una apariencia más discreta durante el tratamiento.'
 			}
 			,
 			{
 				img: '3',
 				name: 'Ortodoncia invisible',
-				content: 'La restauración trata daños dentales sin caries, como erosión, abrasión y abfracción. Estas reparaciones protegen el diente y restauran su forma y función.'
+				content: 'Un enfoque de tratamiento que utiliza alineadores transparentes para corregir problemas de alineación dental de manera discreta.'
 			},
 			{
 				img: '2',
 				name: 'Ortopedia',
-				content: 'La restauración trata daños dentales sin caries, como erosión, abrasión y abfracción. Estas reparaciones protegen el diente y restauran su forma y función.'
+				content: 'ratamiento temprano para corregir problemas dentales y esqueléticos en niños y adolescentes, permitiendo un desarrollo dental saludable.'
 			},
 			{
 				img: '3',
 				name: 'Contenedores',
-				content: 'La restauración trata daños dentales sin caries, como erosión, abrasión y abfracción. Estas reparaciones protegen el diente y restauran su forma y función.'
+				content: 'Dispositivos removibles que se utilizan después del tratamiento de ortodoncia para mantener la posición de los dientes recién alineados.'
 			}
 		]
 	},
@@ -221,22 +221,22 @@ export const categorias = [
 			{
 				img: '1',
 				name: 'Pulpotomía',
-				content: 'Consiste en un tratamiento no invasivo que mejora la apariencia de los dientes, aclarándolos y dejándolos más blancos.'
+				content: 'Un procedimiento dental para tratar y salvar dientes de leche afectados por caries en la pulpa, preservando la salud dental en niños.'
 			},
 			{
 				img: '2',
 				name: 'Pulpectomía',
-				content: 'La restauración trata daños dentales sin caries, como erosión, abrasión y abfracción. Estas reparaciones protegen el diente y restauran su forma y función.'
+				content: 'La eliminación de la pulpa dental en dientes de leche dañados o infectados, seguida de la obturación del conducto radicular, para prevenir futuras complicaciones.'
 			},
 			{
 				img: '3',
 				name: 'Restauración con resina',
-				content: 'La restauración trata daños dentales sin caries, como erosión, abrasión y abfracción. Estas reparaciones protegen el diente y restauran su forma y función.'
+				content: 'Utilización de resina dental para reparar pequeñas caries o defectos en dientes de leche, restaurando la función y la estética.'
 			},
 			{
 				img: '3',
 				name: 'Coronas estéticas',
-				content: 'La restauración trata daños dentales sin caries, como erosión, abrasión y abfracción. Estas reparaciones protegen el diente y restauran su forma y función.'
+				content: 'Reemplazo de dientes de leche gravemente dañados con coronas diseñadas específicamente para mantener la apariencia y función natural de los dientes infantiles.'
 			}
 		]
 	}

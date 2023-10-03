@@ -39,7 +39,7 @@
 				</svg>
 				Urb. José Olaya F-11 - Las Malvinas
 			</div>
-			<div>
+			<a href="https://maps.app.goo.gl/tZZEoRz8zyQBxJZx5" title="Abrir en Google Maps">
 				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<g clip-path="url(#clip0_57_47)">
 					<path d="M12 2.00049C8.13 2.00049 5 5.13049 5 9.00049C5 14.2505 12 22.0005 12 22.0005C12 22.0005 19 14.2505 19 9.00049C19 5.13049 15.87 2.00049 12 2.00049ZM12 11.5005C10.62 11.5005 9.5 10.3805 9.5 9.00049C9.5 7.62049 10.62 6.50049 12 6.50049C13.38 6.50049 14.5 7.62049 14.5 9.00049C14.5 10.3805 13.38 11.5005 12 11.5005Z" fill="white"/>
@@ -51,8 +51,8 @@
 					</defs>
 				</svg>
 				Calle Tronchadero 203 - C.M. Cayma
-			</div>
-			<div>
+			</a>
+			<a href="tel:+51986218962" title="Llamar">
 				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<g clip-path="url(#clip0_57_41)">
 					<path d="M20.01 15.3805C18.78 15.3805 17.59 15.1805 16.48 14.8205C16.13 14.7005 15.74 14.7905 15.47 15.0605L13.9 17.0305C11.07 15.6805 8.42 13.1305 7.01 10.2005L8.96 8.54049C9.23 8.26049 9.31 7.87049 9.2 7.52049C8.83 6.41049 8.64 5.22049 8.64 3.99049C8.64 3.45049 8.19 3.00049 7.65 3.00049H4.19C3.65 3.00049 3 3.24049 3 3.99049C3 13.2805 10.73 21.0005 20.01 21.0005C20.72 21.0005 21 20.3705 21 19.8205V16.3705C21 15.8305 20.55 15.3805 20.01 15.3805Z" fill="white"/>
@@ -64,8 +64,8 @@
 					</defs>
 				</svg>
 				(+51) 986-218-962
-			</div>
-			<div>
+			</a>
+			<a href="mailto:dentavitalisclinica@gmail.com" title="Escribir correo">
 				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<g clip-path="url(#clip0_57_37)">
 					<path d="M20 4.00049H4C2.9 4.00049 2.01 4.90049 2.01 6.00049L2 18.0005C2 19.1005 2.9 20.0005 4 20.0005H20C21.1 20.0005 22 19.1005 22 18.0005V6.00049C22 4.90049 21.1 4.00049 20 4.00049ZM20 18.0005H4V8.00049L12 13.0005L20 8.00049V18.0005ZM12 11.0005L4 6.00049H20L12 11.0005Z" fill="white"/>
@@ -77,7 +77,7 @@
 					</defs>
 				</svg>                
 				dentavitalisclinica@gmail.com
-			</div>
+			</a>
 		</address>
 		<div class="media">
 			<h3>Síguenos en:</h3>
@@ -178,13 +178,18 @@
 		gap: 8px;
 		font-weight: bold;
 	}
-	address>div {
+	address>div, address>a {
+		color: white;
+    	text-decoration: none;
 		display: flex;
 		flex-direction: row;
 		font-size: 14px;
 		font-style: normal;
 		align-items: center;
 		gap: 8px;
+	}
+	address>a:hover {
+		color: var(--blue);
 	}
 	svg {
 		transition: transform 1s ease;
