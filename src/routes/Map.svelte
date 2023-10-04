@@ -21,22 +21,22 @@
                 type: 'Feature',
                 geometry: {
                     type: 'Point',
-                    coordinates: [-71.54635865124519,-16.38957861592958]
+                    coordinates: [-71.54408580256991,-16.34362737225257]
                 },
                 properties: {
                     title: 'Sede',
-                    description: 'Av. Ejército'
+                    description: 'Las Malvinas'
                 }
                 },
                 {
                 type: 'Feature',
                 geometry: {
                     type: 'Point',
-                    coordinates: [-71.54408580256991,-16.34362737225257]
+                    coordinates: [-71.54635865124519,-16.38957861592958]
                 },
                 properties: {
                     title: 'Sede',
-                    description: 'Las Malvinas'
+                    description: 'Av. Ejército'
                 }
                 }
             ]
