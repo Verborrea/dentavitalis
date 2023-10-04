@@ -22,6 +22,11 @@
 	}
 </script>
 
+<svelte:head>
+	<title>Nuestros Servicios Dentales en Arequipa - Denta Vitalis</title>
+	<meta name="description" content="Ofrecemos una amplia gama de servicios dentales en Arequipa, incluyendo estética dental, rehabilitación dental, cirugía oral, implantes dentales 3D y más.">
+</svelte:head>
+
 <Intro />
 
 <div class="container">

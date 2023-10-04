@@ -2,6 +2,11 @@
     import Button from '$lib/Button.svelte'
 </script>
 
+<svelte:head>
+	<title>Gracias por comunicarte con nosotros</title>
+	<meta name="description" content="Escríbenos a dentavitalisclinica@gmail.com o llámanos al (+51) 986 218 962. Estamos aquí para atender tus necesidades dentales. Atención de Lunes a Viernes de 9:30 a 20:00 y Sábados de 9:30 a 13:00">
+</svelte:head>
+
 <article>
     <svg width="136" height="62" viewBox="0 0 136 62" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M120.939 34.0427L120.935 34.0569L120.931 34.071L119.462 39.2412L118.004 34.1081L117.999 34.0939L117.995 34.0799C117.732 33.2166 117.042 32.5491 116.188 32.2975L116.175 32.2935L116.161 32.2897L111.023 30.8816L116.161 29.4736L116.175 29.4699L116.188 29.4658C117.042 29.2142 117.732 28.5467 117.995 27.6835L117.999 27.6693L118.004 27.6552L119.468 22.5L120.932 27.6203L120.935 27.6333L120.939 27.6463C121.203 28.5096 121.892 29.1772 122.746 29.4287L122.76 29.4327L122.773 29.4365L127.911 30.8446L122.773 32.2526L122.76 32.2563L122.746 32.2604C121.892 32.5119 121.203 33.1795 120.939 34.0427Z" fill="var(--teal)" stroke="var(--teal)" stroke-width="4"/>

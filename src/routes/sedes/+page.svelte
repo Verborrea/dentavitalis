@@ -23,6 +23,11 @@
 	const sedes_2 = [ s2_1, s2_4, s2_3, todos_cy, s2_5, s2_2, sede_2 ]
 </script>
 
+<svelte:head>
+	<title>Nuestras Sedes en Arequipa - Denta Vitalis Clínica Dental</title>
+	<meta name="description" content=" Encuentra nuestras dos sedes en Arequipa: Calle Tronchadero 203 - Centro Médico Cayma, Av. Ejército y Urb. Jose Olaya F-11, curva Las Malvinas. Tu clínica dental de confianza.">
+</svelte:head>
+
 <img class="background" src={background} alt="Fondo">
 <article>
 	<div id="ejercito" class="sede">

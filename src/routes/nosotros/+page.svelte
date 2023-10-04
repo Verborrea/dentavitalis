@@ -5,6 +5,10 @@
     import Funciona from "./Funciona.svelte";
 </script>
 
+<svelte:head>
+	<title>Conoce a Denta Vitalis - Nuestra Historia y Equipo</title>
+	<meta name="description" content="Descubre quiénes somos y conoce al Dr. Enmanuel Pacheco Chirinos, experto en implantes dentales 3D. Odontología para todos en Arequipa.">
+</svelte:head>
 
 <section class="header">
     <div class="frame p24 fcol flex16">

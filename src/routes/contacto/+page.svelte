@@ -76,6 +76,12 @@
 	});
 </script>
 
+<svelte:head>
+	<title>Contáctanos - Denta Vitalis Clínica Dental en Arequipa</title>
+	<meta name="description" content="Escríbenos a dentavitalisclinica@gmail.com o llámanos al (+51) 986 218 962. Estamos aquí para atender tus necesidades dentales. Atención de Lunes a Viernes de 9:30 a 20:00 y Sábados de 9:30 a 13:00">
+	<meta name="keywords" content="Contacto, Denta Vitalis, Dentistas en Cayma, Implantes dentales 3D, Arequipa, Clínica dental, Estética dental, Enmanuel Pacheco Chirinos">
+</svelte:head>
+
 <div class="map" bind:this={mapContainer} bind:clientWidth={width}/>
 <section>
 	<div class="content">

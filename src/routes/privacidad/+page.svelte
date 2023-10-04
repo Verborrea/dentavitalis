@@ -1,10 +1,15 @@
+<svelte:head>
+	<title>Política de Privacidad - Denta Vitalis</title>
+	<meta name="description" content="Esta Política de privacidad describe nuestras políticas y procedimientos sobre la recopilación, el uso y la divulgación de su información cuando utiliza el Servicio y le informa sobre sus derechos de privacidad y cómo la ley lo protege.">
+</svelte:head>
+
 <article>
 	<button type="button" on:click={()=>{history.back()}}>
 		&lt; Regresar
 	</button>
 	<h1>Política de privacidad</h1>
 	<p>Última actualización: 03 de octubre de 2023</p>
-	<p>Esta Política de privacidad describe Nuestras políticas y
+	<p>Esta Política de privacidad describe nuestras políticas y
 		procedimientos sobre la recopilación, el uso y la divulgación de su información cuando utiliza
 		el Servicio y le informa sobre sus derechos de privacidad y cómo la ley lo protege.</p>
 	<p>Utilizamos sus datos personales para proporcionar y mejorar

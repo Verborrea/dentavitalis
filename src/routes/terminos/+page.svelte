@@ -1,3 +1,8 @@
+<svelte:head>
+	<title>Términos de Uso</title>
+	<meta name="description" content="Estos Términos de Uso describen nuestras políticas y procedimientos sobre la recopilación, el uso y la divulgación de su información cuando utiliza el Servicio y le informa sobre sus derechos de privacidad y cómo la ley lo protege.">
+</svelte:head>
+
 <article>
     <button
         type="button"
