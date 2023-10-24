@@ -1,6 +1,6 @@
 <script>
 	import tools from '$lib/svg/tools.svg'
-	import dentist from "$lib/images/otra.webp";
+	import dentist from "$lib/images/sedes/doc_av_todos.webp";
     import Button from '$lib/Button.svelte';
     import Pbox from './Pbox.svelte';
 </script>

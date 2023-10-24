@@ -150,7 +150,6 @@
 		max-width: 474px;
 		margin-left: auto;
 		margin-right: 48px;
-		display: block;
 	}
 	h1 {
 		color: var(--teal);
@@ -224,7 +223,6 @@
 			padding: 16px;
 		}
 		form {
-			display: flex;
 			max-width: unset;
 			margin-left: auto;
 			margin-right: auto;

@@ -1,5 +1,5 @@
 <script>
-	import src from '$lib/images/servicios/servicios.webp'
+	import src from '$lib/images/sedes/2-4.webp'
 	import Button from '$lib/Button.svelte'
 </script>
 
