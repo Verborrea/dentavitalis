@@ -185,7 +185,9 @@
 		nav>ul {
 			display: none;
 			position: absolute;
+			height: 100vh;
 			height: 100dvh;
+			width: 100vw;
 			width: 100dvw;
 			flex-direction: column;
 			justify-content: center;

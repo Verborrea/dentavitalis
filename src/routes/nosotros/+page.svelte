@@ -59,7 +59,7 @@
             <p>
                 Convertirnos en líderes reconocidos a nivel nacional en la
                 prestación de servicios odontológicos excepcionales. Ser una
-                referencia en la industria por nuestra excelencia clínica,
+                referencia en la industria por nuestra excelencia,
                 investigación continua y enfoque en la educación tanto para nuestros
                 pacientes como para nuestro equipo de profesionales.
             </p>

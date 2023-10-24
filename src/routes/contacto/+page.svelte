@@ -74,24 +74,30 @@
 			map.remove();
 		}
 	});
+
+	function resizeMap() {
+		map.resize();
+	}
 </script>
 
 <svelte:head>
-	<title>Contáctanos - Denta Vitalis Clínica Dental en Arequipa</title>
+	<title>Contáctanos - Denta Vitalis Consultorio Dental en Arequipa</title>
 	<meta name="description" content="Escríbenos a dentavitalisclinica@gmail.com o llámanos al (+51) 986 218 962. Estamos aquí para atender tus necesidades dentales. Atención de Lunes a Viernes de 9:30 a 20:00 y Sábados de 9:30 a 13:00">
-	<meta name="keywords" content="Contacto, Denta Vitalis, Dentistas en Cayma, Implantes dentales 3D, Arequipa, Clínica dental, Estética dental, Enmanuel Pacheco Chirinos">
+	<meta name="keywords" content="Contacto, Denta Vitalis, Dentistas en Cayma, Implantes dentales 3D, Arequipa, Consultorio dental, Estética dental, Enmanuel Pacheco Chirinos">
 </svelte:head>
 
-<div class="map" bind:this={mapContainer} bind:clientWidth={width}/>
-<section>
-	<div class="content">
-		<div class="form-container">
-			<form method="post">
-				<h1>Contáctanos</h1>
-				<label for="nombre">
-					<p>Nombre completo:</p>
-					<input name="nombre" id="nombre" type="text" placeholder="ej: José Pérez" required>
-				</label>
+<svelte:window on:resize={resizeMap}></svelte:window>
+
+<article>
+	<div class="form-wrapper">
+		<form method="post">
+			<h1>Contáctanos</h1>
+			<p>Estamos aquí para ayudarte. Escríbenos y nos pondremos en contacto contigo lo más pronto posible.</p>
+			<label for="nombre">
+				<p>Nombre completo:</p>
+				<input name="nombre" id="nombre" type="text" placeholder="ej: José Pérez" required>
+			</label>
+			<div class="labels">
 				<label for="correo">
 					<p>Correo electrónico:</p>
 					<input name="correo" id="correo" type="email" placeholder="ej: ejemplo@123.com" required>
@@ -100,99 +106,85 @@
 					<p>Número de teléfono:</p>
 					<input name="telefono" id="telefono" type="text" placeholder="ej: 987-654-321">
 				</label>
-				<label for="razon">
-					<p>Razón o motivo:</p>
-					<textarea name="razon" id="razon" cols="40" rows="6" placeholder="Buenas, me gustaría preguntar sobre..." required></textarea>
-				</label>
-				<button type="submit">
-					Enviar
-					<svg class="HoverArrow" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true">
-						<g fill-rule="evenodd">
-							<path class="HoverArrow__linePath" d="M0 5h7"></path>
-							<path class="HoverArrow__tipPath" d="M1 1l4 4-4 4"></path>
-						</g>
-					</svg>
-				</button>
-			</form>
-		</div>
-		<SocialMedia />
+			</div>
+			<label for="razon">
+				<p>Razón o motivo:</p>
+				<textarea name="razon" id="razon" cols="40" rows="6" placeholder="Buenas, me gustaría preguntar sobre..." required></textarea>
+			</label>
+			<button type="submit">
+				Enviar
+				<svg class="HoverArrow" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true">
+					<g fill-rule="evenodd">
+						<path class="HoverArrow__linePath" d="M0 5h7"></path>
+						<path class="HoverArrow__tipPath" d="M1 1l4 4-4 4"></path>
+					</g>
+				</svg>
+			</button>
+		</form>
 	</div>
-	<div class="relleno" />
-</section>
+	<div class="map-wrapper">
+		<div class="map" bind:this={mapContainer} bind:clientWidth={width}/>
+	</div>
+</article>
 
 <style>
-	:global(main) {
+	article {
+		display: flex;
+		align-items: stretch;
+	}
+	.form-wrapper, .map-wrapper {
+		flex: 1;
 		position: relative;
 	}
-	section {
-		display: flex;
-		width: 100%;
-		align-items: center;
-	}
-	section > * {
-		flex: 1;
-	}
 	.map {
-		position: absolute;
-		width: 50%;
-		right: 0;
 		height: calc(854px + 11vw);
-	}
-	.content {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 32px;
-		padding: 64px 0;
-	}
-	.form-container {
-		width: 80%;
-		min-width: 480px;
-		padding: 16px;
-		background-color: var(--teal);
-		color: var(--white);
-		border-radius: 32px;
+		position: absolute;
+		z-index: 10;
+		inset: 0;
 	}
 	form {
-		padding: 24px 15px;
 		display: flex;
 		flex-direction: column;
-		align-items: center;
 		gap: 16px;
-		border: 1px solid white;
-		border-radius: 20px;
+		padding: 128px 0;
+		max-width: 474px;
+		margin-left: auto;
+		margin-right: 48px;
+		display: block;
+	}
+	h1 {
+		color: var(--teal);
+	}
+
+	.labels {
+		display: flex;
+    	gap: 16px;
+	}
+	.labels>* {
+		flex: 1;
 	}
 	label {
-		display: flex;
-		flex-direction: column;
-		width: 100%;
+		display: block;
 	}
 	label>p {
+		color: var(--teal);
 		font-weight: bold;
 		font-size: 14px;
-		margin-left: 16px;
 	}
-	input, textarea {
+	input, textarea, button {
+		width: 100%;
+		padding: 8px;
+		border-radius: 8px;
+		border: 1px solid #bdbdbd;
 		font-size: 16px;
-		border: none;
-		padding: 8px 16px;
-		border-radius: 20px;
 	}
 	button {
-		font-size: 16px;
-		padding: 8px 16px;
-		border-radius: 22px;
-		border: 2px solid white;
-		font-weight: bold;
-		color: white;
 		background-color: var(--teal);
+		color: var(--white);
+		border: 1px solid var(--teal);
+		font-weight: bold;
 	}
-	button:focus, button:hover {
-		border: 2px solid white;
-		color: var(--teal);
-		background-color: white;
-		outline: none;
-	}
+
 	input:focus, textarea:focus {
 		outline: none;
 		background-color: #a9fffe;
@@ -223,29 +215,43 @@
 		transform: translateX(3px);
 	}
 
-	@media (max-width: 924px) {
-		section {
-			flex-direction: column;
-    		padding: 24px;
+	@media (max-width: 1080px) {
+		p {
+			font-size: 16px;
+		}
+		.form-wrapper, .map-wrapper {
+			display: flex;
+			padding: 16px;
+		}
+		form {
+			display: flex;
+			max-width: unset;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.map-wrapper {
+			align-items: center;
+		}
+		.map {
+			position: relative !important;
+    		width: 100%;
+			height: 60vh;
+			border-radius: 24px;
 		}
 	}
 
 	@media (max-width: 768px) {
-		section {
-			padding: 16px;
+		article {
+			flex-direction: column;
 		}
-		.content {
+		form {
 			padding: 0;
-   			width: 100%;
 		}
-		.form-container {
-			width: 100%;
-			min-width: auto;
+		.labels {
+			flex-direction: column;
 		}
-
-		.form-container form {
-			padding: 11px;
-			border-radius: 22px;
+		.map {
+			height: 40vh;
 		}
 	}
 </style>

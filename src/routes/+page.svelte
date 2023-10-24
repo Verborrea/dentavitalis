@@ -10,8 +10,8 @@
 
 <svelte:head>
 	<title>Denta Vitalis - Odontología para todos en Arequipa</title>
-	<meta name="description" content="Clínica dental en Arequipa con especialización en implantes dentales 3D. Brindamos servicios de estética dental, rehabilitación dental y más.">
-	<meta name="keywords" content="Denta Vitalis, Dentistas en Cayma, Implantes dentales 3D, Arequipa, Clínica dental, Estética dental, Enmanuel Pacheco Chirinos, Odontopediatría, Periodoncia, Ortodoncia, Cirugía oral, Tratamientos de conducto dental">
+	<meta name="description" content="Consultorio dental en Arequipa con especialización en implantes dentales 3D. Brindamos servicios de estética dental, rehabilitación dental y más.">
+	<meta name="keywords" content="Denta Vitalis, Dentistas en Cayma, Implantes dentales 3D, Arequipa, Consultorio dental, Estética dental, Enmanuel Pacheco Chirinos, Odontopediatría, Periodoncia, Ortodoncia, Cirugía oral, Tratamientos de conducto dental">
 </svelte:head>
 
 <Section1></Section1>

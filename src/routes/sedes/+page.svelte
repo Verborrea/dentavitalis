@@ -24,8 +24,8 @@
 </script>
 
 <svelte:head>
-	<title>Nuestras Sedes en Arequipa - Denta Vitalis Clínica Dental</title>
-	<meta name="description" content=" Encuentra nuestras dos sedes en Arequipa: Calle Tronchadero 203 - Centro Médico Cayma, Av. Ejército y Urb. Jose Olaya F-11, curva Las Malvinas. Tu clínica dental de confianza.">
+	<title>Nuestras Sedes en Arequipa - Denta Vitalis Consultorio Dental</title>
+	<meta name="description" content=" Encuentra nuestras dos sedes en Arequipa: Calle Tronchadero 203 - Centro Médico Cayma, Av. Ejército y Urb. Jose Olaya F-11, curva Las Malvinas. Tu consultorio dental de confianza.">
 </svelte:head>
 
 <img class="background" src={background} alt="Fondo">

@@ -41,7 +41,7 @@
 			</li>
 			<li>
 				<p><strong>Compañía</strong> (referida como "la Compañía", "Nosotros", "Nos" o "Nuestro" en este Acuerdo)
-					se refiere a Clínica Denta Vitalis, Calle Tronchadero 203, Cayma, Arequipa, Perú.</p>
+					se refiere al Consultorio Denta Vitalis, Calle Tronchadero 203, Cayma, Arequipa, Perú.</p>
 			</li>
 			<li>
 				<p><strong>Las cookies</strong> son
