@@ -1,76 +1,83 @@
 <script>
+    import { Application } from '@splinetool/runtime';
     import { onMount } from "svelte";
-    import * as THREE from 'three';
 
-    let renderer, camera
+    onMount(()=>{
+        const canvas = document.getElementById('canvas3d');
+        const app = new Application(canvas);
+        app.load('https://prod.spline.design/u4T0gpSTOCFYVnxT/scene.splinecode');
+    });
+    // import * as THREE from 'three';
 
-    function resizeRenderer() {
-        const container = document.querySelector('#img-container');
-        renderer.setSize(container.clientWidth, container.clientHeight);
-        camera.aspect = container.clientWidth / container.clientHeight;
-        camera.updateProjectionMatrix();
-    }
+    // let renderer, camera
 
-    onMount(() => {
-        const scene = new THREE.Scene();
-        camera = new THREE.PerspectiveCamera( 50, 300 / 500, 0.1, 1000 );
+    // function resizeRenderer() {
+    //     const container = document.querySelector('#img-container');
+    //     renderer.setSize(container.clientWidth, container.clientHeight);
+    //     camera.aspect = container.clientWidth / container.clientHeight;
+    //     camera.updateProjectionMatrix();
+    // }
 
-        renderer = new THREE.WebGLRenderer({ antialias: true });
-        renderer.setSize( 300, 500 );
-        renderer.setClearColor(0x0FB3B2);
-        renderer.shadowMap.enabled = true; // Habilitar las sombras en el renderer
+    // onMount(() => {
+    //     const scene = new THREE.Scene();
+    //     camera = new THREE.PerspectiveCamera( 50, 300 / 500, 0.1, 1000 );
+
+    //     renderer = new THREE.WebGLRenderer({ antialias: true });
+    //     renderer.setSize( 300, 500 );
+    //     renderer.setClearColor(0x0FB3B2);
+    //     renderer.shadowMap.enabled = true; // Habilitar las sombras en el renderer
         
-        document.querySelector('#img-container').appendChild( renderer.domElement );
+    //     document.querySelector('#img-container').appendChild( renderer.domElement );
 
-        resizeRenderer()
+    //     resizeRenderer()
 
-        const geometry = new THREE.BoxGeometry( 1, 1, 1 );
-        const material = new THREE.MeshStandardMaterial( { color: 0x0FB3B2 } );
-        const cube = new THREE.Mesh( geometry, material );
-        cube.castShadow = true; // El cubo proyectará sombras
-        cube.receiveShadow = true; // El cubo recibirá sombras
-        scene.add( cube );
+    //     const geometry = new THREE.BoxGeometry( 1, 1, 1 );
+    //     const material = new THREE.MeshStandardMaterial( { color: 0x0FB3B2 } );
+    //     const cube = new THREE.Mesh( geometry, material );
+    //     cube.castShadow = true; // El cubo proyectará sombras
+    //     cube.receiveShadow = true; // El cubo recibirá sombras
+    //     scene.add( cube );
 
-        const ambientLight = new THREE.AmbientLight(0xffffff, 0.75); // El segundo argumento es la intensidad
-        scene.add(ambientLight);
+    //     const ambientLight = new THREE.AmbientLight(0xffffff, 0.75); // El segundo argumento es la intensidad
+    //     scene.add(ambientLight);
 
 
-        // Agregar luz direccional
-        const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-        directionalLight.position.set(1, 1, 1);
-        directionalLight.castShadow = true;
-        scene.add(directionalLight);
+    //     // Agregar luz direccional
+    //     const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+    //     directionalLight.position.set(1, 1, 1);
+    //     directionalLight.castShadow = true;
+    //     scene.add(directionalLight);
 
-        // Configurar el área de sombra para la luz
-        directionalLight.shadow.camera.left = -5;
-        directionalLight.shadow.camera.right = 5;
-        directionalLight.shadow.camera.top = 5;
-        directionalLight.shadow.camera.bottom = -5;
-        directionalLight.shadow.camera.near = 0.1;
-        directionalLight.shadow.camera.far = 1000;
-        directionalLight.shadow.mapSize.set(1024, 1024); // Resolución de la sombra
+    //     // Configurar el área de sombra para la luz
+    //     directionalLight.shadow.camera.left = -5;
+    //     directionalLight.shadow.camera.right = 5;
+    //     directionalLight.shadow.camera.top = 5;
+    //     directionalLight.shadow.camera.bottom = -5;
+    //     directionalLight.shadow.camera.near = 0.1;
+    //     directionalLight.shadow.camera.far = 1000;
+    //     directionalLight.shadow.mapSize.set(1024, 1024); // Resolución de la sombra
 
-        camera.position.z = 3;
+    //     camera.position.z = 3;
 
-        function animate() {
-            requestAnimationFrame( animate );
+    //     function animate() {
+    //         requestAnimationFrame( animate );
 
-            cube.rotation.x += 0.01;
-            cube.rotation.y += 0.01;
+    //         cube.rotation.x += 0.01;
+    //         cube.rotation.y += 0.01;
 
-            renderer.render( scene, camera );
-        }
+    //         renderer.render( scene, camera );
+    //     }
 
-        animate();
-    })
+    //     animate();
+    // })
 </script>
 
-<svelte:window on:resize={resizeRenderer}/>
+<!-- <svelte:window on:resize={resizeRenderer}/> -->
 
 <div class="bg-teal">
     <div id="tech-spacer-1" />
     <section id="tech">
-        <div id="img-container" />
+        <canvas id="canvas3d"></canvas>
         <div class="text-container">
             <p><strong>Soluciones modernas</strong></p>
             <h2>Utilizamos tecnología <strong>3D</strong></h2>
@@ -100,9 +107,8 @@
         padding: 24px;
         color: var(--white);
     }
-    #img-container {
-        display: flex;
-        justify-content: center;
+    #canvas3d {
+        align-self: center;
     }
     strong {
         color: var(--dark-blue);
@@ -110,6 +116,12 @@
     p > strong {
         font-size: 20px;
         letter-spacing: -0.04em;
+    }
+
+    @media (max-width: 767px) {
+        #canvas3d {
+            width: 100% !important;
+        }
     }
 
     @media (min-width: 768px) {
