@@ -1,5 +1,5 @@
 <script>
-    import nosotros from "$lib/images/nosotros/doc.webp";
+    import nosotros from "$lib/images/sedes/doc_av_todos.webp";
     import smile from "$lib/svg/smile.svg";
     import Tech from "./Tech.svelte";
     import Funciona from "./Funciona.svelte";
@@ -78,11 +78,8 @@
 		<div id="first">Dra. Pilar Escobedo Zegarra</div>
 		<div id="second">Dr. Enmanuel Pacheco Chirinos</div>
 		<div id="third">Asis. Lorena Salazar Loaiza</div>
-	</div>
-    <div class="grinder a1080 p16">
-		<div id="fourth">Asis. Giovanna Villavicencio Ponce de León</div>
 		<div id="fifth">Dr. Sergio Cárdenas Zenteno</div>
-		<div id="sixth">Gda. Ana Belén Alva</div>
+		<div id="sixth">Dra. Ana Belén Alva</div>
 	</div>
 </section>
 
@@ -92,7 +89,7 @@
 	.grinder {
 		display: grid;
 		grid-template-columns: 1fr;
-		grid-template-rows: 300px 300px 300px;
+		grid-template-rows: 300px 300px 300px 300px 300px;
 		gap: 32px;
 		margin: 96px auto;
 	}
@@ -118,20 +115,17 @@
 	}
 
 	#first {
-		grid-row-start: 1;
-		grid-row-end: 1;
+		grid-row-start: 2;
+		grid-row-end: 3;
 		background-image: linear-gradient(0deg, var(--colorx) , transparent 75%), url(/src/lib/images/nosotros/doc_av_1.webp);
 	}
 	#second {
-		grid-row-start: 2;
-		grid-row-end: 3;
+		grid-row-start: 1;
+		grid-row-end: 1;
 		background-image: linear-gradient(0deg, var(--colorx) , transparent 75%), url(/src/lib/images/nosotros/doc_av_3.webp);
 	}
 	#third {
 		background-image: linear-gradient(0deg, var(--colorx) , transparent 75%), url(/src/lib/images/nosotros/doc_av_2.webp);
-	}
-	#fourth {
-		background-image: linear-gradient(0deg, var(--colorx) , transparent 75%), url(/src/lib/images/nosotros/doc_cayma_1.webp);
 	}
 	#fifth {
 		background-image: linear-gradient(0deg, var(--colorx) , transparent 75%), url(/src/lib/images/nosotros/doc_cayma_2.webp);
@@ -214,11 +208,10 @@
 	#second:hover { background-size: auto 110% }
 
 
-	#fourth, #sixth {
+	#sixth {
 		background-size: auto 110%;
 		background-position: 5% 14%;
 	}
-	#fourth:hover,
 	#sixth:hover { background-size: auto 125% }
 
 
@@ -231,16 +224,11 @@
 	@media (min-width: 768px) {
 
 		.grinder {
-			grid-template-columns: 3fr 2fr;
-			grid-template-rows: 330px 330px;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 330px 330px 300px;
 		}	
 
 		#second {
-			grid-row-start: 1;
-			grid-row-end: 3;
-		}
-
-		#fifth {
 			grid-row-start: 1;
 			grid-row-end: 3;
 		}
@@ -297,14 +285,13 @@
 	}
 
 	@media (min-width: 480px) and (max-width: 767px) {
-		#first, #third, #second, #fourth, #sixth, #fifth {
+		#first, #third, #second, #sixth, #fifth {
 			background-size: 100% auto;
 			background-position: 28% 14%;
 		}
 		#first:hover,
 		#second:hover,
 		#third:hover,
-		#fourth:hover,
 		#fifth:hover,
 		#sixth:hover { background-size: 115% auto; }
 	}
