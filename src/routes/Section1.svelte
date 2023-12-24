@@ -1,6 +1,7 @@
 <video loop autoplay muted>
     <track kind="captions">
-    <source src="/gray.mp4" type="video/mp4" />
+    <source src="/gray.webm" type="video/mp4" />
+    <source src="/gray.mp4" type="video/mp4">
 </video>
 
 <section>

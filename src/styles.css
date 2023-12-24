@@ -59,6 +59,9 @@ a.button {
 a.button:hover {
     text-decoration: none;
 }
+.button:active, button:active {
+    transform: scale(0.95) !important;
+}
 a.button.variation {
     background-color: var(--teal);
     color: var(--white);
