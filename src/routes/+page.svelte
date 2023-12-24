@@ -6,10 +6,9 @@
     import Section1 from "./Section1.svelte";
 	import Section2 from "./Section2.svelte";
 	import Button from '$lib/Button.svelte';
-    import { onMount } from "svelte";
 
 	let showVideo = true;
-	let invisible = false;
+	// let invisible = false;
 
 	function toggleVideo() {
 		showVideo = !showVideo;
@@ -19,12 +18,12 @@
 		}
 	}
 
-	function toggleVolumen() {
-		invisible = true;
-		const videoElement = document.querySelector('.lalala')
-		videoElement.play();
-		videoElement.muted = false;
-	}
+	// function toggleVolumen() {
+	// 	invisible = true;
+	// 	const videoElement = document.querySelector('.lalala')
+	// 	videoElement.play();
+	// 	videoElement.muted = false;
+	// }
 
 </script>
 
@@ -36,9 +35,9 @@
 
 <div class="video-container" class:showVideo={showVideo}>
 	<button type="button" class="close-button" on:click={toggleVideo}>Cerrar</button>
-	<button type="button" class="volumen" class:invisible={invisible} on:click={toggleVolumen}>
+	<!-- <button type="button" class="volumen" class:invisible={invisible} on:click={toggleVolumen}>
 		<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M320-273v-414q0-17 12-28.5t28-11.5q5 0 10.5 1.5T381-721l326 207q9 6 13.5 15t4.5 19q0 10-4.5 19T707-446L381-239q-5 3-10.5 4.5T360-233q-16 0-28-11.5T320-273Z"/></svg>
-	</button>
+	</button> -->
 	<video class="lalala" controls loading="lazy">
 		<track kind="captions">
 		<source src="/navidad.webm" type="video/mp4">
@@ -162,7 +161,7 @@
 	.video-container.showVideo {
 		display: flex;
 	}
-	.volumen svg {
+	/* .volumen svg {
 		display: block;
 		width: 40px;
     	height: 40px;
@@ -180,7 +179,7 @@
 	}
 	.invisible {
 		display: none;
-	}
+	} */
 	video {
 		max-width: 100%;
 		max-height: 100%;
