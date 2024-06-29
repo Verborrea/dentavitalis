@@ -5,7 +5,7 @@
     onMount(()=>{
         const canvas = document.getElementById('canvas3d');
         const app = new Application(canvas);
-        app.load('https://draft.spline.design/Q6slubfyD-S4dtFK/scene.splinecode');
+        app.load('https://draft.spline.design/P2PQa9JJLTYVLUwl/scene.splinecode');
     });
 </script>
 
