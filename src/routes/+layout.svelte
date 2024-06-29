@@ -2,9 +2,11 @@
 	import '../styles.css'
 	import logo from '$lib/images/logo.png'
 	import { page } from '$app/stores'
-    import Footer from './Footer.svelte';
+    import Footer from './Footer.svelte'
 
-	let isActive = false, width;
+	let isActive = false, width, clientHeight
+	let currentY
+	let previousY
 
 	function burgerBtn() {
 		if (isActive) {
@@ -29,11 +31,24 @@
 		document.body.style.overflow = 'auto'
 		isActive = false
 	}
+
+	const deriveDirection = (y) => {
+		const direction = !previousY || previousY < y ? 'down' : 'up'
+		previousY = y
+
+		return direction
+	}
+
+	$: scrollDirection = deriveDirection(currentY)
+	$: offscreen = scrollDirection === 'down' && currentY > clientHeight * 2
 </script>
 
-<svelte:window bind:innerWidth={width}/>
+<svelte:window
+	bind:innerWidth={width}
+	bind:scrollY={currentY}
+/>
 
-<header>
+<header class:hidden={offscreen} bind:clientHeight>
 	<nav aria-label="Navegación principal" class="a1080 p16 space-between">
 		<a class="no-animation" href="/" title="Inicio">
 			<img src={logo} alt="Logo de Denta Vitalis" height="64">
@@ -78,6 +93,18 @@
 <style>
 	header {
 		background: white;
+		position: sticky;
+		top: 0;
+		z-index: 3;
+		transition: transform 0.3s ease-in;
+	}
+	header.hidden {
+		transform: translateY(-100%);
+	}
+	@media (prefers-reduced-motion) {
+		header.hidden {
+			transform: translateY(0);
+		}
 	}
 	nav {
 		height: 80px;
@@ -146,7 +173,7 @@
 		flex-direction: column;
 		align-items: flex-end;
 		gap: 3px;
-		z-index: 9999;
+		z-index: 4;
 	}
 	.bb {
 		height: 5px;
@@ -194,7 +221,7 @@
 			top: 0;
 			left: 0;
 			background: white;
-			z-index: 999;
+			z-index: 3;
 		}
 		#burger-btn {
 			display: flex;
@@ -234,7 +261,7 @@
 	.reserva {
 		text-decoration: none;
 		position: relative;
-    	z-index: 100;
+    	z-index: 2;
 		background-color: var(--white);
 		color: var(--teal);
 		gap: 4px;

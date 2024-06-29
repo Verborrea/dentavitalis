@@ -1,6 +1,6 @@
 /* poppins-300 - latin */
 @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-display: swap;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 300;
@@ -9,7 +9,7 @@
   }
 /* poppins-600 - latin */
 @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-display: swap;
     font-family: 'Poppins';
     font-style: bold;
     font-weight: 600;
@@ -29,6 +29,9 @@
 	margin: 0;
     font-family: 'Poppins';
     box-sizing: border-box;
+}
+html {
+    scroll-padding-top: 140px;
 }
 :root {
     color-scheme: only light;

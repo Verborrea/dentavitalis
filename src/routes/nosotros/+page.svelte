@@ -166,7 +166,7 @@
 	.frame img {
 		border-radius: 32px;
 		position: relative;
-		z-index: 10;
+		z-index: 1;
 	}
 	.frame strong {
 		color: var(--dark-blue);

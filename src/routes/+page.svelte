@@ -8,7 +8,6 @@
 	import Button from '$lib/Button.svelte';
 
 	let showVideo = true;
-	// let invisible = false;
 
 	function toggleVideo() {
 		showVideo = !showVideo;
@@ -17,14 +16,6 @@
 			videoElement.pause();
 		}
 	}
-
-	// function toggleVolumen() {
-	// 	invisible = true;
-	// 	const videoElement = document.querySelector('.lalala')
-	// 	videoElement.play();
-	// 	videoElement.muted = false;
-	// }
-
 </script>
 
 <svelte:head>
@@ -33,18 +24,15 @@
 	<meta name="keywords" content="Denta Vitalis, Dentistas en Cayma, Implantes dentales 3D, Arequipa, Consultorio dental, Estética dental, Enmanuel Pacheco Chirinos, Odontopediatría, Periodoncia, Ortodoncia, Cirugía oral, Tratamientos de conducto dental">
 </svelte:head>
 
-<div class="video-container" class:showVideo={showVideo}>
+<!-- <div class="video-container" class:showVideo={showVideo}>
 	<button type="button" class="close-button" on:click={toggleVideo}>Cerrar</button>
-	<!-- <button type="button" class="volumen" class:invisible={invisible} on:click={toggleVolumen}>
-		<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M320-273v-414q0-17 12-28.5t28-11.5q5 0 10.5 1.5T381-721l326 207q9 6 13.5 15t4.5 19q0 10-4.5 19T707-446L381-239q-5 3-10.5 4.5T360-233q-16 0-28-11.5T320-273Z"/></svg>
-	</button> -->
 	<video class="lalala" controls loading="lazy">
 		<track kind="captions">
 		<source src="/navidad.webm" type="video/mp4">
 		<source src="/navidad.mp4" type="video/mp4">
 		Tu navegador no admite la reproducción de videos.
 	</video>
-</div>
+</div> -->
 
 <Section1></Section1>
 <Section2></Section2>
@@ -145,7 +133,7 @@
 <div class="final-padding"></div>
 
 <style>
-	.video-container {
+	/* .video-container {
 		display: none;
 		position: fixed;
 		top: 0;
@@ -153,7 +141,7 @@
 		width: 100%;
 		height: 100%;
 		background-color: rgba(0, 0, 0, 0.7);
-		z-index: 9999;
+		z-index: 20;
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
@@ -161,25 +149,6 @@
 	.video-container.showVideo {
 		display: flex;
 	}
-	/* .volumen svg {
-		display: block;
-		width: 40px;
-    	height: 40px;
-	}
-	.volumen path {
-		fill: var(--white);
-	}
-	.volumen {
-		background: var(--teal);
-		border: none;
-		border-radius: 50%;
-		padding: 10px;
-		position: absolute;
-		z-index: 9999999999;
-	}
-	.invisible {
-		display: none;
-	} */
 	video {
 		max-width: 100%;
 		max-height: 100%;
@@ -199,7 +168,7 @@
 
 	.close-button:hover {
 		background-color: #cccccc;
-	}
+	} */
 
 
 
@@ -307,9 +276,10 @@
 		height: 38px;
 		gap: 8px;
 		text-decoration: none;
+		transition: all 0.3s ease-out;
 	}
 	#fifth li a:hover {
-		text-decoration: underline;
+		transform: translateX(1em);
 	}
 	@media (min-width: 924px) {
 		.list-containers {

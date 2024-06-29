@@ -139,7 +139,7 @@
 	.map {
 		height: calc(854px + 11vw);
 		position: absolute;
-		z-index: 10;
+		z-index: 1;
 		inset: 0;
 	}
 	form {

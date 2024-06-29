@@ -108,7 +108,7 @@
 	}
 
 	button:hover {
-		text-decoration: underline;
+		color: var(--blue);
 	}
     
     .servicios {

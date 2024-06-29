@@ -124,26 +124,5 @@
             width: 50%;
             margin: 0;
         }
-        /* .white {
-            position: absolute;
-            z-index: 999;
-            margin: 48px;
-            width: 50%;
-            max-width: 508px;
-            
-        }
-        .map {
-            aspect-ratio: auto;
-            height: 800px;
-            width: 100%;
-            margin: 0;
-            border-radius: 0;
-        } */
-    }
-    @media (min-width: 1080px) {
-        /* .white {
-            left: calc((100% - 1080px) / 2);
-            margin: 16px;
-        } */
     }
 </style>

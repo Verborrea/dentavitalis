@@ -17,10 +17,9 @@
 	import s2_3 from '$lib/images/sedes/2-3.webp'
 	import s2_4 from '$lib/images/sedes/2-4.webp'
 	import s2_5 from '$lib/images/sedes/2-5.webp'
-	import todos_cy from '$lib/images/sedes/doc_cayma_todos.webp'
 
-	const sedes_1 = [ s1_1, s1_2, s1_3, todos_av, s1_4, s1_5, sede_1, s1_6 ]
-	const sedes_2 = [ s2_1, s2_4, s2_3, todos_cy, s2_5, s2_2, sede_2 ]
+	const sedes_1 = [ s1_1, s1_6, s1_2, s1_3, todos_av, s1_4, s1_5, sede_1 ]
+	const sedes_2 = [ s2_1, s2_4, s2_3, s2_5, s2_2, sede_2 ]
 </script>
 
 <svelte:head>
@@ -46,7 +45,7 @@
 			<h1>Sede Av. Ejército</h1>
 			<p class="ubi">Calle Tronchadero 203 - Centro Medico Cayma, Av. Ejército, Arequipa</p>
 			<h3>Especialidades:</h3>
-			<p>Ortodoncia, Diseño de sonrisa, Odontología estética</p>
+			<p>Odontología Integral Computarizada</p>
 		</div>
 	</div>
 	<Track init_scroll="false" images={sedes_1}/>
@@ -68,7 +67,7 @@
 			<h1>Sede las Malvinas</h1>
 			<p class="ubi">Urb. Jose Olaya F-11, curva Las Malvinas - Cayma Arequipa</p>
 			<h3>Especialidades:</h3>
-			<p>Prótesis dentales, colocación de coronas y puentes</p>
+			<p>Odontología Integral Computarizada</p>
 		</div>
 	</div>
 	<Track init_scroll="true" images={sedes_2}/>
@@ -85,7 +84,7 @@
 		width: 100%;
 		height: 770px;
 		position: absolute;
-		z-index: -10;
+		z-index: -2;
 		object-fit: cover;
 	}
 	.sede {

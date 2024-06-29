@@ -132,7 +132,7 @@
 	}
 	.spacer {
 		position: relative;
-		z-index: 999999;
+		z-index: 10;
 		display: block;
 		width: 100%;
 		height: auto;
@@ -158,7 +158,7 @@
 		background-color: var(--teal);
 		color: white;
 		position: relative;
-		z-index: 999999;
+		z-index: 10;
 	}
 	p a {
 		text-decoration: none;
@@ -296,10 +296,4 @@
 			padding: 0 16px;
 		}
 	}
-</style>
-
-	<!-- Tronchadero 203 - Centro Médico Cayma                
-
-	Urb. Jose Olaya F-11 - Curva Las Malvinas        -->
-
-		
+</style>		

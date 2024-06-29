@@ -20,7 +20,7 @@
 	<div class="img-container">
 		<Pbox --d="0" --w="200px" --h="200px" --i="auto auto 0 0" color="var(--teal)"/>
 		<Pbox --d="0.666s" --w="140px" --h="140px" --i="0 0 auto auto" color="var(--blue)"/>
-		<Pbox --d="0.333s" --w="80px"  --h="80px"  --i="auto 0 25% auto" color="var(--dark-blue)"/>
+		<Pbox --d="0.333s" --w="80px"  --h="80px"  --i="auto 0 0 auto" color="var(--dark-blue)"/>
 		<img src={dentist} alt="Dentista">
 	</div>
 </article>
