@@ -292,6 +292,9 @@
 		li>a {
 			font-size: 24px;
 		}
+		dialog, dialog img {
+			width: 100%;
+		}
 	}
 
 	/* Headers =============================== */
