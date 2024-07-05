@@ -4,12 +4,12 @@
 	import background from '$lib/svg/rect.svg'
 	import Track from './Track.svelte';
 
-	import s1_1 from '$lib/images/sedes/1.webp'
+	import s1_1 from '$lib/images/sedes/consultorio.avif'
 	import s1_2 from '$lib/images/sedes/2.webp'
 	import s1_3 from '$lib/images/sedes/3.webp'
-	import s1_4 from '$lib/images/sedes/4.webp'
-	import s1_5 from '$lib/images/sedes/5.webp'
-	import s1_6 from '$lib/images/sedes/6.webp'
+	import s1_4 from '$lib/images/sedes/fachada2.webp'
+	import s1_5 from '$lib/images/sedes/fachada3.webp'
+	import s1_6 from '$lib/images/sedes/fachada.avif'
 	import todos_av from '$lib/images/sedes/doc_av_todos.webp'
 
 	import s2_1 from '$lib/images/sedes/2-1.webp'

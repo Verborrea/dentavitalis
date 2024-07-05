@@ -1,41 +1,24 @@
 <script>
-	import tech from "$lib/images/tech.jpg";
-	import smile from "$lib/svg/smile.svg";
-    import Carousel from "./DCarousel.svelte";
-    import Map from "./Map.svelte";
-    import Section1 from "./Section1.svelte";
-	import Section2 from "./Section2.svelte";
-	import Button from '$lib/Button.svelte';
+	import tech from '$lib/images/tech.jpg'
+	import smile from '$lib/svg/smile.svg'
+	import Button from '$lib/Button.svelte'
 
-	let showVideo = true;
-
-	function toggleVideo() {
-		showVideo = !showVideo;
-		if (!showVideo) {
-			const videoElement = document.querySelector('.lalala')
-			videoElement.pause();
-		}
-	}
+	import Map from './Map.svelte'
+	import Add from './Add.svelte'
+	import Carousel from './DCarousel.svelte'
+	import Section1 from './Section1.svelte'
+	import Section2 from './Section2.svelte'
 </script>
 
 <svelte:head>
 	<title>Denta Vitalis - Odontología para todos en Arequipa</title>
-	<meta name="description" content="Consultorio dental en Arequipa con especialización en implantes dentales 3D. Brindamos servicios de estética dental, rehabilitación dental y más.">
+	<meta name="description" content="Odontología Integral Computarizada 🦷. Consultorio dental en Arequipa con especialización en implantes dentales 3D. Brindamos servicios de estética dental, rehabilitación dental y más.">
 	<meta name="keywords" content="Denta Vitalis, Dentistas en Cayma, Implantes dentales 3D, Arequipa, Consultorio dental, Estética dental, Enmanuel Pacheco Chirinos, Odontopediatría, Periodoncia, Ortodoncia, Cirugía oral, Tratamientos de conducto dental">
 </svelte:head>
 
-<!-- <div class="video-container" class:showVideo={showVideo}>
-	<button type="button" class="close-button" on:click={toggleVideo}>Cerrar</button>
-	<video class="lalala" controls loading="lazy">
-		<track kind="captions">
-		<source src="/navidad.webm" type="video/mp4">
-		<source src="/navidad.mp4" type="video/mp4">
-		Tu navegador no admite la reproducción de videos.
-	</video>
-</div> -->
-
-<Section1></Section1>
-<Section2></Section2>
+<Add />
+<Section1 />
+<Section2 />
 <div class="thrid-container">
 	<div class="pre"></div>
 	<section id="third" class="article">
@@ -133,45 +116,6 @@
 <div class="final-padding"></div>
 
 <style>
-	/* .video-container {
-		display: none;
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-color: rgba(0, 0, 0, 0.7);
-		z-index: 20;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-	}
-	.video-container.showVideo {
-		display: flex;
-	}
-	video {
-		max-width: 100%;
-		max-height: 100%;
-	}
-
-	.close-button {
-		position: absolute;
-		top: 16px;
-		right: 16px;
-		cursor: pointer;
-		padding: 8px 16px;
-		border-radius: 22px;
-		border: none;
-		font-weight: bold;
-		font-size: 16px;
-	}
-
-	.close-button:hover {
-		background-color: #cccccc;
-	} */
-
-
-
 	.final-padding {
 		height: 0px;
 	}
@@ -181,7 +125,7 @@
 		align-items: center;
 		gap: 16px;
 	}
-/* ================================= */
+	/* ================================= */
 	#third {
 		padding: var(--margin);
 		margin-bottom: 96px;
@@ -220,7 +164,7 @@
 		#third {
 			border-radius: 48px 0 0 48px;
 			padding: 0;
-    		flex-direction: row;
+			flex-direction: row;
 			height: 577px;
 		}
 		.third-child {
@@ -235,7 +179,7 @@
 			width: 50%;
 		}
 	}
-/* ================================= */
+	/* ================================= */
 	#fourth {
 		align-items: center;
 		text-align: center;
@@ -249,7 +193,7 @@
 			margin: auto;
 		}
 	}
-/* ================================= */
+	/* ================================= */
 	#fifth {
 		background-color: #87D9D9;
 		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%230fb3b2' fill-opacity='0.4'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");

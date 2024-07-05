@@ -1,12 +1,21 @@
 <script>
-	import '../styles.css'
-	import logo from '$lib/images/logo.png'
+	import { onMount } from 'svelte'
 	import { page } from '$app/stores'
+	import logo from '$lib/images/logo.png'
+	import anuncio from '$lib/images/anuncio.avif'
     import Footer from './Footer.svelte'
 
 	let isActive = false, width, clientHeight
 	let currentY
 	let previousY
+
+	let navLinks = [
+		{ href: "/", name: "Inicio" },
+		{ href: "/nosotros", name: "Nosotros" },
+		{ href: "/servicios", name: "Servicios" },
+		{ href: "/sedes", name: "Sedes" },
+		{ href: "/contacto", name: "Contáctanos" }
+	]
 
 	function burgerBtn() {
 		if (isActive) {
@@ -19,26 +28,31 @@
 		}
 	}
 
-	let navLinks = [
-		{ href: "/", name: "Inicio" },
-		{ href: "/nosotros", name: "Nosotros" },
-		{ href: "/servicios", name: "Servicios" },
-		{ href: "/sedes", name: "Sedes" },
-		{ href: "/contacto", name: "Contáctanos" }
-	]
-
-	$: if (isActive && width > 767) {
-		document.body.style.overflow = 'auto'
-		isActive = false
+	function open() {
+		dialog.showModal()
 	}
 
-	const deriveDirection = (y) => {
+	function deriveDirection(y) {
 		const direction = !previousY || previousY < y ? 'down' : 'up'
 		previousY = y
 
 		return direction
 	}
 
+	let dialog
+
+	function close() {
+		dialog.close()
+	}
+
+	onMount(() => {
+		dialog.showModal()
+	})
+
+	$: if (isActive && width > 767) {
+		document.body.style.overflow = 'auto'
+		isActive = false
+	}
 	$: scrollDirection = deriveDirection(currentY)
 	$: offscreen = scrollDirection === 'down' && currentY > clientHeight * 2
 </script>
@@ -55,13 +69,19 @@
 		</a>
 		<ul class:change={isActive}>
 			{#each navLinks as { href, name }}
-			{@const current = $page.url.pathname === href}
 				<li>
-					<a aria-current={current ? 'page' : false} on:click={burgerBtn}
-						{href}>{name}
+					<a
+						aria-current={$page.url.pathname == href ? 'page' : false}
+						on:click={burgerBtn}
+						{href}
+					>
+						{name}
 					</a>
 				</li>
 			{/each}
+			<li>
+				<button class="work" type="button" on:click={open}>Empleos</button>
+			</li>
 		</ul>
 		<button id="burger-btn" class:change={isActive} on:click={burgerBtn} type="button" title="Menú">
 			<div class="bb" id="bb1" />
@@ -85,12 +105,52 @@
 </header>
 
 <main class:change={isActive}>
+	<dialog bind:this={dialog}>
+		<button type="button" on:click={close}>
+			<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="gray"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" class="svelte-45tgqq"></path></svg>
+		</button>
+		<img src={anuncio} alt="Se buscan practicantes">
+	</dialog>
 	<slot />
 </main>
 
 <Footer />
 
 <style>
+	dialog {
+		margin: 0;
+		border: none;
+		max-height: 100%;
+		padding: 8px;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+	dialog img {
+		width: 560px;
+		height: auto;
+		display: block;
+	}
+	dialog button {
+		position: absolute;
+    	right: 16px;
+		top: 16px;
+		border: none;
+		background: transparent;
+		cursor: pointer;
+		border-radius: 50%;
+		background: white;
+		padding: 8px;
+	}
+	dialog button:focus {
+		outline: none;
+	}
+	dialog button:hover path {
+		fill: var(--teal)
+	}
+	dialog svg {
+		display: block;
+	}
 	header {
 		background: white;
 		position: sticky;
@@ -111,19 +171,25 @@
 	}
 	ul {
 		display: flex;
-		gap: 24px;
+		gap: 18px;
 		list-style: none;
 		align-items: center;
 	}
-	a {
+	.work {
+		padding: 0;
+		border: none;
+		font-size: inherit;
+		background: transparent;
+	}
+	a, .work {
 		position: relative;
 		display: block;
 		text-decoration: none;
 		color: var(--text);
-		font-weight: bold;
+		font-weight: 500;
 	}
 
-	li>a::before {
+	li>a::before, .work::before {
 		content: '';
 		position: absolute;
 		width: 100%;
@@ -135,10 +201,11 @@
 		transform: scaleX(0);
 		transition: transform .3s ease-in-out;
 	}
-	li>a:focus, li>a:active {
+	li>a:focus, li>a:active, .work:focus {
 		outline: transparent;
 	}
-	li>a:hover::before, li>a:focus::before, li>a:active::before {
+	li>a:hover::before, li>a:focus::before, li>a:active::before,
+	.work:hover::before {
 		transform-origin: left;
 		transform: scaleX(1);
 	}
@@ -154,13 +221,6 @@
 	li>a[aria-current='page']::before {
 		background-color: var(--teal);
 	}
-
-	/* address {
-		font-style: normal;
-		background-color: var(--teal);
-   		position: relative;
-		color: white;
-	} */
 
 	/* Burger Btn ============================ */
 	#burger-btn {
@@ -241,7 +301,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		font-weight: bold;
+		font-weight: 500;
 		font-style: normal;
 	}
 	address {

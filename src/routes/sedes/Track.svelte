@@ -11,8 +11,8 @@
     }
 
     onMount(() => {
+        tracker.scrollLeft = (2144 + screenSize) / 4
         if (init_scroll == 'true') {
-            tracker.scrollLeft = 2144 + screenSize
             margin = 64
         }
     })

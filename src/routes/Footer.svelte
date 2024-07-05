@@ -132,7 +132,7 @@
 	}
 	.spacer {
 		position: relative;
-		z-index: 10;
+		z-index: 5;
 		display: block;
 		width: 100%;
 		height: auto;
@@ -141,7 +141,7 @@
 	.media {
 		display: flex;
 		gap: 24px;
-		font-weight: bold;
+		font-weight: 500;
 	}
 	img {
 		display: block;
@@ -158,7 +158,7 @@
 		background-color: var(--teal);
 		color: white;
 		position: relative;
-		z-index: 10;
+		z-index: 5;
 	}
 	p a {
 		text-decoration: none;
@@ -176,7 +176,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: 8px;
-		font-weight: bold;
+		font-weight: 500;
 	}
 	address>div, address>a {
 		color: white;
