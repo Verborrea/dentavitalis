@@ -29,6 +29,7 @@
 	}
 
 	function open() {
+		burgerBtn()
 		dialog.showModal()
 	}
 
@@ -289,7 +290,7 @@
 		ul.change {
 			display: flex;
 		}
-		li>a {
+		li>a, .work {
 			font-size: 24px;
 		}
 		dialog, dialog img {

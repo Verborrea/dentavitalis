@@ -17,9 +17,11 @@
 	import s2_3 from '$lib/images/sedes/2-3.webp'
 	import s2_4 from '$lib/images/sedes/2-4.webp'
 	import s2_5 from '$lib/images/sedes/2-5.webp'
+	import modelo from '$lib/images/sedes/modelo.avif'
+	import modelo2 from '$lib/images/sedes/modelo2.avif'
 
 	const sedes_1 = [ s1_1, s1_6, s1_2, s1_3, todos_av, s1_4, s1_5, sede_1 ]
-	const sedes_2 = [ s2_1, s2_4, s2_3, s2_5, s2_2, sede_2 ]
+	const sedes_2 = [ s2_1, s2_4, modelo2, s2_3, s2_5, s2_2, modelo, sede_2 ]
 </script>
 
 <svelte:head>

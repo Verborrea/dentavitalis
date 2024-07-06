@@ -13,9 +13,6 @@ let transporter = nodemailer.createTransport({
 
 transporter.verify((error, success) => {
     if (error) console.error(error)
-    else {
-        console.log("server is ready to send messages")
-    }
 })
 
 export default transporter
