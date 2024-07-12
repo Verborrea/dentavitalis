@@ -50,7 +50,7 @@
 			<p>Odontología Integral Computarizada</p>
 		</div>
 	</div>
-	<Track init_scroll="false" images={sedes_1}/>
+	<!-- <Track init_scroll="false" images={sedes_1}/> -->
 </article>
 <article>
 	<div id="malvinas" class="sede">
@@ -72,7 +72,7 @@
 			<p>Odontología Integral Computarizada</p>
 		</div>
 	</div>
-	<Track init_scroll="true" images={sedes_2}/>
+	<!-- <Track init_scroll="true" images={sedes_2}/> -->
 </article>
 
 
