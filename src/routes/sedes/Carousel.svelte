@@ -61,6 +61,9 @@
 </article>
 
 <style>
+	.links {
+		margin-top: 32px;
+	}
 	a {
 		display: inline-block;
 		padding-inline: 2px;
@@ -83,7 +86,7 @@
 	}
 	article p {
 		text-align: center;
-		margin-bottom: 64px;
+		margin-bottom: 32px;
 	}
 	.container {
 		display: flex;
@@ -109,7 +112,6 @@
 		border-radius: 64px;
 		width: 100%;
 		max-width: 1080px;
-		box-shadow: #0000003d 0px 4px 4px 0px;
 	}
 	@media (max-width: 700px){
 		img {
