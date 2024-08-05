@@ -1,6 +1,7 @@
 <script>
 	import tech from '$lib/images/tech.jpg'
 	import qr from '$lib/images/qr.avif'
+	import portada from '$lib/images/portada.avif'
 	import smile from '$lib/svg/smile.svg'
 	import Button from '$lib/Button.svelte'
 
@@ -17,6 +18,14 @@
 	<meta name="keywords" content="Denta Vitalis, Dentistas en Cayma, Implantes dentales 3D, Arequipa, Consultorio dental, Estética dental, Enmanuel Pacheco Chirinos, Odontopediatría, Periodoncia, Ortodoncia, Cirugía oral, Tratamientos de conducto dental">
 </svelte:head>
 
+<div class="video">
+	<video controls autoplay poster={portada}>
+		<track kind="captions">
+		<source src="/propaganda.mp4" type="video/mp4">
+		<source src="/propaganda.webm" type="video/webm">
+		Tu navegador no soporta la reproducción de videos.
+	</video>
+</div>
 <Add />
 <Section1 />
 <Section2 />
@@ -148,10 +157,17 @@
 		display: flex;
 		align-items: center;
 	}
-	.qr {
+	.qr, .video {
 		margin: 0 auto;
 		max-width: 1080px;
 		margin-bottom: 64px;
+	}
+	.video {
+		margin: 64px auto;
+	}
+	video {
+		width: 100%;
+		border-radius: 48px;
 	}
 	.qr img {
 		width: 60%;
@@ -187,6 +203,9 @@
 		gap: 16px;
 	}
 	@media (max-width: 924px) {
+		video {
+			border-radius: 0;
+		}
 		.qr {
 			flex-direction: column;
 		}
