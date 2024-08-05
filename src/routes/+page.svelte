@@ -1,5 +1,6 @@
 <script>
 	import tech from '$lib/images/tech.jpg'
+	import qr from '$lib/images/qr.avif'
 	import smile from '$lib/svg/smile.svg'
 	import Button from '$lib/Button.svelte'
 
@@ -113,9 +114,69 @@
 	</div>
 </section>
 <Map />
+<section class="fc qr">
+	<div class="qr-image">
+		<img src={qr} alt="Código QR de Denta Vitalis">
+	</div>
+	<div class="fc qr-text">
+		<div class="text-container">
+			<h1>Síguenos en Redes Sociales</h1>
+			<nav class="fc redes">
+				<a href="/">
+					<svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M36 6C19.431 6 6 19.5005 6 36.1553C6 51.2722 17.079 63.7564 31.515 65.9367V44.1465H24.093V36.2186H31.515V30.9445C31.515 22.2115 35.748 18.3788 42.969 18.3788C46.428 18.3788 48.255 18.6351 49.122 18.7527V25.6703H44.196C41.13 25.6703 40.059 28.5924 40.059 31.8853V36.2186H49.044L47.826 44.1465H40.062V66C54.705 64.0067 66 51.4199 66 36.1553C66 19.5005 52.569 6 36 6Z" fill="black"/>
+					</svg>
+				</a>
+				<a href="/">
+					<svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M22.6667 6C13.4633 6 6 13.4633 6 22.6667V49.3333C6 58.5367 13.4633 66 22.6667 66H49.3333C58.5367 66 66 58.5367 66 49.3333V22.6667C66 13.4633 58.5367 6 49.3333 6H22.6667ZM56 12.6667C57.84 12.6667 59.3333 14.16 59.3333 16C59.3333 17.84 57.84 19.3333 56 19.3333C54.16 19.3333 52.6667 17.84 52.6667 16C52.6667 14.16 54.16 12.6667 56 12.6667ZM36 19.3333C45.2033 19.3333 52.6667 26.7967 52.6667 36C52.6667 45.2033 45.2033 52.6667 36 52.6667C26.7967 52.6667 19.3333 45.2033 19.3333 36C19.3333 26.7967 26.7967 19.3333 36 19.3333ZM36 26C30.5533 26 26 30.5533 26 36C26 41.4467 30.5533 46 36 46C41.4467 46 46 41.4467 46 36C46 30.5533 41.4467 26 36 26Z" fill="black"/>
+					</svg>
+				</a>
+				<a href="/">
+					<svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M58.8571 6H13.1429C9.20429 6 6 9.20429 6 13.1429V58.8571C6 62.7957 9.20429 66 13.1429 66H58.8571C62.7957 66 66 62.7957 66 58.8571V13.1429C66 9.20429 62.7957 6 58.8571 6ZM53.1514 32.1757C52.8271 32.2057 52.4986 32.2257 52.1657 32.2257C48.4186 32.2257 45.1257 30.2986 43.21 27.3857C43.21 35.0271 43.21 43.7214 43.21 43.8671C43.21 50.5943 37.7557 56.0486 31.0286 56.0486C24.3014 56.0486 18.8471 50.5943 18.8471 43.8671C18.8471 37.14 24.3014 31.6857 31.0286 31.6857C31.2829 31.6857 31.5314 31.7086 31.7814 31.7243V37.7271C31.5314 37.6971 31.2857 37.6514 31.0286 37.6514C27.5943 37.6514 24.8114 40.4343 24.8114 43.8686C24.8114 47.3029 27.5943 50.0857 31.0286 50.0857C34.4629 50.0857 37.4957 47.38 37.4957 43.9457C37.4957 43.81 37.5557 15.9543 37.5557 15.9543H43.2929C43.8329 21.0843 47.9743 25.1329 53.1514 25.5043V32.1757Z" fill="black"/>
+					</svg>
+				</a>
+			</nav>
+		</div>
+	</div>
+</section>
 <div class="final-padding"></div>
 
 <style>
+	.fc {
+		display: flex;
+		align-items: center;
+	}
+	.qr {
+		margin: 0 auto;
+		max-width: 1080px;
+		margin-bottom: 64px;
+	}
+	.qr img {
+		width: 60%;
+		margin: auto;
+    	display: block;
+	}
+	.qr-image, .qr-text {
+		flex: 1;
+	}
+	.qr-text {
+		align-items: stretch;
+		gap: 16px;
+	}
+	.qr-text::before {
+		content: '';
+		width: 16px;
+		background-color: black;
+		flex-shrink: 0;
+	}
+	.text-container {
+		align-self: center;
+	}
+	.redes {
+		gap: 24px;
+	}
 	.final-padding {
 		height: 0px;
 	}
@@ -124,6 +185,25 @@
 		flex-direction: column;
 		align-items: center;
 		gap: 16px;
+	}
+	@media (max-width: 924px) {
+		.qr {
+			flex-direction: column;
+		}
+		.qr img {
+			width: 70%;
+		}
+		.qr-text {
+			padding: 24px;
+			text-align: center;
+		}
+		.qr-text::before {
+			display: none;
+		}
+		nav.redes {
+			padding-top: 16px;
+			justify-content: center;
+		}
 	}
 	/* ================================= */
 	#third {
