@@ -6,7 +6,7 @@
 	import Button from '$lib/Button.svelte'
 
 	import Map from './Map.svelte'
-	import Add from './Add.svelte'
+	// import Add from './Add.svelte'
 	import Carousel from './DCarousel.svelte'
 	import Section1 from './Section1.svelte'
 	import Section2 from './Section2.svelte'
@@ -26,7 +26,7 @@
 		Tu navegador no soporta la reproducción de videos.
 	</video>
 </div>
-<Add />
+<!-- <Add /> -->
 <Section1 />
 <Section2 />
 <div class="thrid-container">
