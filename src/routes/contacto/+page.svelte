@@ -2,7 +2,8 @@
 	import mapboxgl from 'mapbox-gl'
 	import '../../mapbox.css'
 	import { onMount, onDestroy } from "svelte"
-    import SocialMedia from './SocialMedia.svelte';
+	import { env } from '$env/dynamic/public' 
+	// import SocialMedia from './SocialMedia.svelte';
 
 	let mapContainer, map, width;
 	let center = [-71.54454633162405, -16.36971528627511];
@@ -14,7 +15,7 @@
             zoom = 12
         }
         
-		mapboxgl.accessToken = 'pk.eyJ1IjoiYWxhbi0yNSIsImEiOiJjbGViaGI4aDkwcHpxM25udTAwaWcyczFrIn0.MZhpce5K1n4Gi7xBVGFj6Q';
+		mapboxgl.accessToken = env.PUBLIC_MAPBOX_TOKEN;
 		map = new mapboxgl.Map({
 			container: mapContainer, // container ID
 			style: 'mapbox://styles/alan-25/clm58crii02cx01qi2xqb74tx', // style URL

@@ -1,9 +1,7 @@
 <script>
-	import { onMount } from 'svelte'
 	import { page } from '$app/stores'
 	import logo from '$lib/images/logo.png'
-	import anuncio from '$lib/images/anuncio.avif'
-    import Footer from './Footer.svelte'
+  import Footer from './Footer.svelte'
 
 	let isActive = false, width, clientHeight
 	let currentY
@@ -28,10 +26,10 @@
 		}
 	}
 
-	function open() {
-		burgerBtn()
-		dialog.showModal()
-	}
+	// function open() {
+	// 	burgerBtn()
+	// 	dialog.showModal()
+	// }
 
 	function deriveDirection(y) {
 		const direction = !previousY || previousY < y ? 'down' : 'up'
@@ -40,15 +38,15 @@
 		return direction
 	}
 
-	let dialog
+	// let dialog
 
-	function close() {
-		dialog.close()
-	}
+	// function close() {
+	// 	dialog.close()
+	// }
 
-	onMount(() => {
-		dialog.showModal()
-	})
+	// onMount(() => {
+	// 	dialog.showModal()
+	// })
 
 	$: if (isActive && width > 767) {
 		document.body.style.overflow = 'auto'
@@ -80,9 +78,9 @@
 					</a>
 				</li>
 			{/each}
-			<li>
+			<!-- <li>
 				<button class="work" type="button" on:click={open}>Empleos</button>
-			</li>
+			</li> -->
 		</ul>
 		<button id="burger-btn" class:change={isActive} on:click={burgerBtn} type="button" title="Menú">
 			<div class="bb" id="bb1" />
@@ -106,19 +104,19 @@
 </header>
 
 <main class:change={isActive}>
-	<dialog bind:this={dialog}>
+	<!-- <dialog bind:this={dialog}>
 		<button type="button" on:click={close}>
 			<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="gray"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" class="svelte-45tgqq"></path></svg>
 		</button>
 		<img src={anuncio} alt="Se buscan practicantes">
-	</dialog>
+	</dialog> -->
 	<slot />
 </main>
 
 <Footer />
 
 <style>
-	dialog {
+	/* dialog {
 		margin: 0;
 		border: none;
 		max-height: 100%;
@@ -151,7 +149,7 @@
 	}
 	dialog svg {
 		display: block;
-	}
+	} */
 	header {
 		background: white;
 		position: sticky;
@@ -176,13 +174,7 @@
 		list-style: none;
 		align-items: center;
 	}
-	.work {
-		padding: 0;
-		border: none;
-		font-size: inherit;
-		background: transparent;
-	}
-	a, .work {
+	a {
 		position: relative;
 		display: block;
 		text-decoration: none;
@@ -190,7 +182,7 @@
 		font-weight: 500;
 	}
 
-	li>a::before, .work::before {
+	li>a::before {
 		content: '';
 		position: absolute;
 		width: 100%;
@@ -202,11 +194,10 @@
 		transform: scaleX(0);
 		transition: transform .3s ease-in-out;
 	}
-	li>a:focus, li>a:active, .work:focus {
+	li>a:focus, li>a:active {
 		outline: transparent;
 	}
-	li>a:hover::before, li>a:focus::before, li>a:active::before,
-	.work:hover::before {
+	li>a:hover::before, li>a:focus::before, li>a:active::before {
 		transform-origin: left;
 		transform: scaleX(1);
 	}
@@ -290,12 +281,12 @@
 		ul.change {
 			display: flex;
 		}
-		li>a, .work {
+		li>a {
 			font-size: 24px;
 		}
-		dialog, dialog img {
+		/* dialog, dialog img {
 			width: 100%;
-		}
+		} */
 	}
 
 	/* Headers =============================== */

@@ -18,14 +18,14 @@
 	<meta name="keywords" content="Denta Vitalis, Dentistas en Cayma, Implantes dentales 3D, Arequipa, Consultorio dental, Estética dental, Enmanuel Pacheco Chirinos, Odontopediatría, Periodoncia, Ortodoncia, Cirugía oral, Tratamientos de conducto dental">
 </svelte:head>
 
-<div class="video">
+<!-- <div class="video">
 	<video controls autoplay poster={portada}>
 		<track kind="captions">
 		<source src="/propaganda.mp4" type="video/mp4">
 		<source src="/propaganda.webm" type="video/webm">
 		Tu navegador no soporta la reproducción de videos.
 	</video>
-</div>
+</div> -->
 <!-- <Add /> -->
 <Section1 />
 <Section2 />

@@ -3,11 +3,12 @@
     import mapboxgl from 'mapbox-gl'
     import '../mapbox.css'
     import { onMount, onDestroy } from "svelte"
+    import { env } from '$env/dynamic/public' 
 
     let mapContainer, map;
 
     onMount(() => {
-        mapboxgl.accessToken = 'pk.eyJ1IjoiYWxhbi0yNSIsImEiOiJjbGViaGI4aDkwcHpxM25udTAwaWcyczFrIn0.MZhpce5K1n4Gi7xBVGFj6Q';
+        mapboxgl.accessToken = env.PUBLIC_MAPBOX_TOKEN;
         map = new mapboxgl.Map({
             container: mapContainer, // container ID
             style: 'mapbox://styles/alan-25/clm58crii02cx01qi2xqb74tx', // style URL
