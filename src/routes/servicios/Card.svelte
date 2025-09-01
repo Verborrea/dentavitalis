@@ -24,14 +24,6 @@
 		width: 100%;
 	}
 
-	.servicio a {
-		padding: 4px 16px;
-		background-color: var(--teal);
-		color: var(--white);
-		text-decoration: none;
-		border-radius: 18px;
-	}
-
 	.text {
 		display: flex;
 		flex-direction: column;

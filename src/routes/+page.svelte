@@ -157,18 +157,18 @@
 		display: flex;
 		align-items: center;
 	}
-	.qr, .video {
+	.qr {
 		margin: 0 auto;
 		max-width: 1080px;
 		margin-bottom: 64px;
 	}
-	.video {
+	/* .video {
 		margin: 64px auto;
 	}
 	video {
 		width: 100%;
 		border-radius: 48px;
-	}
+	} */
 	.qr img {
 		width: 60%;
 		margin: auto;
@@ -203,9 +203,9 @@
 		gap: 16px;
 	}
 	@media (max-width: 924px) {
-		video {
+		/* video {
 			border-radius: 0;
-		}
+		} */
 		.qr {
 			flex-direction: column;
 		}
